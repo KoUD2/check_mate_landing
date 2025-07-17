@@ -1,0 +1,113 @@
+.userCard {
+	display: flex;
+	width: 30.833vw;
+	height: 33.438vw;
+	padding: 1.563vw 1.51vw;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-start;
+	border-radius: 2.5vw;
+	background: var(--white, #f8f8f8);
+}
+
+.cardHeading {
+	display: flex;
+	flex-direction: column;
+	gap: 0.833vw;
+}
+
+.tip {
+	display: flex;
+	padding: 0.729vw 1.25vw;
+	justify-content: center;
+	align-items: center;
+	gap: 0.521vw;
+	border-radius: 5.208vw;
+	background: var(--snow_white, #fff);
+
+	> p {
+		color: var(--black, #292929);
+
+		font-family: Gilroy;
+		font-size: 0.885vw;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 110%;
+	}
+}
+
+.userImage {
+	width: 27.813vw;
+	height: auto;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+	.userCard {
+		position: relative;
+		width: 91.847vw;
+		height: 38.729vw;
+		padding: 2.878vw;
+		gap: 7.674vw;
+		border-radius: 3.837vw;
+	}
+
+	.cardHeading {
+		gap: 1.918vw;
+
+		> h3 {
+			font-size: 3.357vw;
+		}
+	}
+
+	.tip {
+		padding: 1.679vw 2.878vw;
+		gap: 1.199vw;
+		border-radius: 11.99vw;
+
+		> p {
+			font-size: 1.799vw;
+		}
+	}
+
+	.userImage {
+		position: absolute;
+		width: 39.209vw;
+		top: 2.878vw;
+		right: 2.878vw;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.userCard {
+		position: relative;
+		width: 92.326vw;
+		height: 41.163vw;
+		padding: 5.581vw;
+		border-radius: 7.442vw;
+	}
+
+	.cardHeading {
+		gap: 3.721vw;
+
+		> h3 {
+			font-size: 5.581vw;
+		}
+	}
+
+	.tip {
+		padding: 3.256vw 5.581vw;
+		gap: 2.326vw;
+		border-radius: 23.256vw;
+
+		> p {
+			font-size: 3.256vw;
+		}
+	}
+
+	.userImage {
+		position: absolute;
+		width: 36.047vw;
+		top: 5.581vw;
+		right: 5.581vw;
+	}
+}

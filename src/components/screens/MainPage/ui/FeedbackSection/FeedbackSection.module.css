@@ -1,0 +1,76 @@
+.feedbackSection {
+	display: flex;
+	width: 70.677vw;
+	flex-direction: column;
+	align-items: center;
+	gap: 3.333vw;
+	margin: 0 auto 6.25vw auto;
+}
+
+.cardsReviews {
+	display: flex;
+	align-items: flex-start;
+	gap: 1.042vw;
+	align-self: stretch;
+}
+
+.buttonsArrows {
+	display: none;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+	.feedbackSection {
+		width: auto;
+		gap: 5.755vw;
+		margin: 0 auto 14.388vw auto;
+	}
+
+	.sliderWrapper {
+		overflow: hidden;
+		width: 100vw;
+		margin: 0 auto;
+	}
+
+	.cardsReviews {
+		display: flex;
+		gap: 2.28vw;
+		transition: transform 0.3s ease-in-out;
+	}
+
+	.buttonsArrows {
+		display: flex;
+		justify-content: center;
+		gap: 2.4vw;
+		margin-top: 2.88vw;
+	}
+
+	.buttonNext {
+		cursor: pointer;
+		border: none;
+		outline: none;
+		display: flex;
+		width: 6.475vw;
+		height: 6.475vw;
+		justify-content: center;
+		align-items: center;
+		border-radius: 100%;
+		background: var(--white, #f8f8f8);
+
+		> svg > path {
+			transition: all 0.3s ease-out;
+		}
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.feedbackSection {
+		width: 92.558vw;
+		gap: 11.163vw;
+		margin: 0 auto 27.907vw auto;
+	}
+
+	.cardsReviews {
+		flex-direction: column;
+		gap: 2.791vw;
+	}
+}

@@ -1,0 +1,41 @@
+# Robots.txt для CheckMate
+User-agent: *
+Allow: /
+
+# Основные страницы для индексации
+Allow: /
+Allow: /api/
+Allow: /*.css
+Allow: /*.js
+Allow: /*.jpg
+Allow: /*.jpeg
+Allow: /*.png
+Allow: /*.svg
+Allow: /*.webp
+Allow: /*.ico
+
+# Запрещаем служебные папки
+Disallow: /admin/
+Disallow: /private/
+Disallow: /_next/
+Disallow: /api/internal/
+
+# Специальные правила для поисковых ботов
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Yandex
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 2
+
+# Путь к карте сайта
+Sitemap: https://checkmate.ai/sitemap.xml
+
+# Дополнительные карты сайта
+Sitemap: https://checkmate.ai/sitemap-pages.xml
+Sitemap: https://checkmate.ai/sitemap-blog.xml 

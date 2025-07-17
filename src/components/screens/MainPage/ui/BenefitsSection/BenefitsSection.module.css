@@ -1,0 +1,364 @@
+.benefitsSection {
+	display: flex;
+	width: 94.583vw;
+	flex-direction: column;
+	align-items: center;
+	gap: 3.333vw;
+	margin: 0 auto 6.25vw auto;
+
+	> h2 {
+		width: 23.854vw;
+		text-align: center;
+	}
+}
+
+.advantagesCards {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 1.042vw;
+	align-self: stretch;
+}
+
+.cardsRow {
+	display: flex;
+	align-items: center;
+	gap: 1.042vw;
+}
+
+.card {
+	display: flex;
+	position: relative;
+	padding: 2.083vw;
+	width: 46.771vw;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 1.667vw;
+	border-radius: 2.5vw;
+	background: var(--white, #f8f8f8);
+
+	> h3 {
+		width: 22.218vw;
+	}
+
+	> img {
+		height: 21.719vw;
+		width: auto;
+	}
+
+	> p {
+		color: var(--grey, #a1a1a1);
+	}
+}
+
+.card2 {
+	position: relative;
+	overflow: hidden;
+	width: 94.583vw;
+
+	> h3 {
+		width: auto;
+	}
+
+	> img {
+		width: 68.594vw;
+		height: 27.083vw;
+	}
+}
+
+.headerWidth {
+	width: auto !important;
+}
+
+.message {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 14.583vw;
+	height: 4.74vw;
+	padding: 0.729vw;
+	border-radius: 16px;
+	background: #ffffff;
+
+	> p {
+		width: 9.115vw;
+		color: var(--black, #292929);
+		font-family: 'Gilroy Medium';
+		font-size: 0.938vw;
+		font-style: normal;
+		font-weight: 500;
+		line-height: normal;
+	}
+
+	> div {
+		display: inline-flex;
+		padding: 0.781vw;
+		align-items: center;
+		gap: 0.417vw;
+		border-radius: 0.521vw;
+		background: var(--white, #f8f8f8);
+
+		> p {
+			color: var(--black, #292929);
+			font-family: 'Gilroy Medium';
+			font-size: 0.938vw;
+			font-style: normal;
+			font-weight: 600;
+			line-height: normal;
+		}
+	}
+}
+
+.fullMessage {
+	margin-top: 8.854vw;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	box-shadow: 0vw 0.26vw 1.042vw -0.938vw rgba(46, 51, 57, 0.08);
+}
+
+.image1 {
+	position: absolute;
+	top: 10.536vw;
+	left: 13.172vw;
+	width: 7.241vw !important;
+	height: 4.862vw !important;
+	transform: rotate(16.473deg);
+	flex-shrink: 0;
+}
+.image2 {
+	position: absolute;
+	top: 4.01vw;
+	right: 3.542vw;
+	width: 18.073vw !important;
+	height: 26.198vw !important;
+	flex-shrink: 0;
+}
+
+.topMessage {
+	margin-top: 9.254vw;
+}
+
+.handImage {
+	position: absolute;
+	width: 63.996vw !important;
+	height: 42.665vw !important;
+	top: -1.596vw;
+	right: -11.059vw;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+	.benefitsSection {
+		width: 91.847vw;
+		gap: 5.755vw;
+		margin: 0 auto 14.388vw auto;
+
+		> h2 {
+			width: 49.88vw;
+		}
+	}
+
+	.advantagesCards {
+		gap: 2.398vw;
+	}
+
+	.cardsRow {
+		gap: 2.398vw;
+	}
+
+	.card {
+		width: 44.724vw;
+		padding: 3.837vw;
+		gap: 3.837vw;
+		border-radius: 5.755vw;
+
+		> h3 {
+			width: 37.05vw;
+		}
+
+		> img {
+			height: 18.825vw;
+			width: auto;
+		}
+	}
+
+	.card2 {
+		width: 91.847vw;
+
+		> img {
+			width: 85.252vw;
+			height: 33.813vw;
+		}
+
+		> p {
+			width: 50.494vw;
+		}
+	}
+
+	.message {
+		width: 33.573vw;
+		height: 10.911vw;
+		padding: 1.679vw 1.679vw 1.319vw 1.679vw;
+		border-radius: 1.918vw;
+
+		> p {
+			width: 20.983vw;
+			font-size: 2.158vw;
+		}
+
+		> div {
+			padding: 1.799vw;
+			gap: 0.959vw;
+			border-radius: 1.199vw;
+
+			> p {
+				font-size: 2.158vw;
+			}
+		}
+	}
+
+	.fullMessage {
+		margin-top: 6.954vw;
+		z-index: 10;
+	}
+
+	.image1 {
+		top: 15.97vw;
+		left: 4.319vw;
+		width: 6.74vw !important;
+		height: 4.526vw !important;
+	}
+	.image2 {
+		top: 15.468vw;
+		right: 3.837vw;
+		width: 12.95vw !important;
+		height: 18.825vw !important;
+	}
+
+	.topMessage {
+		margin-top: 0;
+	}
+
+	.handImage {
+		width: 75.257vw !important;
+		height: auto !important;
+		top: auto;
+		bottom: 0;
+		right: -19.94vw;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.benefitsSection {
+		width: 92.558vw;
+		gap: 11.163vw;
+		margin: 0 auto 27.907vw auto;
+
+		> h2 {
+			width: 67.674vw;
+		}
+	}
+
+	.advantagesCards {
+		gap: 2.791vw;
+	}
+
+	.cardsRow {
+		flex-direction: column;
+		gap: 2.791vw;
+	}
+
+	.card {
+		width: 92.558vw;
+		padding: 5.581vw;
+		gap: 5.581vw;
+		border-radius: 7.442vw;
+
+		> h3 {
+			font-size: 5.581vw;
+			width: 81.395vw;
+		}
+
+		> p {
+			font-size: 4.186vw;
+		}
+
+		> img {
+			height: 37.674vw;
+			width: 81.395vw;
+		}
+	}
+
+	.card:nth-child(2) {
+		height: 103.721vw;
+	}
+
+	.card2 {
+		width: 92.558vw;
+		height: 138.605vw !important;
+
+		> img {
+			margin-left: -50.093vw;
+			margin-top: 19.279vw;
+			width: auto;
+			height: 62.791vw;
+		}
+
+		> p {
+			width: 81.395vw;
+		}
+	}
+
+	.message {
+		width: 65.116vw;
+		height: 21.163vw;
+		padding: 3.256vw 3.256vw 2.558vw 3.256vw;
+		border-radius: 3.721vw;
+
+		> p {
+			width: 40.698vw;
+			font-size: 4.186vw;
+		}
+
+		> div {
+			padding: 3.488vw;
+			gap: 1.86vw;
+			border-radius: 2.326vw;
+
+			> p {
+				font-size: 4.186vw;
+			}
+		}
+	}
+
+	.fullMessage {
+		margin-top: 30.814vw;
+		z-index: 10;
+	}
+
+	.image1 {
+		top: 39.635vw;
+		left: 16.514vw;
+		width: 21.113vw !important;
+		height: 14.178vw !important;
+	}
+	.image2 {
+		top: 120px;
+		right: 3.721vw;
+		width: 49.767vw !important;
+		height: 71.86vw !important;
+	}
+
+	.topMessage {
+		margin-top: 0;
+	}
+
+	.handImage {
+		width: 141.507vw !important;
+		height: auto !important;
+		top: auto;
+		bottom: 0;
+		right: -36.102vw;
+	}
+}

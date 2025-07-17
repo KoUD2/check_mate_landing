@@ -1,0 +1,72 @@
+.socialMedia {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 1.25vw;
+	width: 11.667vw;
+
+	> h3 {
+		color: var(--snow_white, #fff);
+	}
+}
+
+.buttonLinkSocialMedia {
+	cursor: pointer;
+	display: flex;
+	width: fit-content;
+	height: 2.5vw;
+	padding: 0.521vw 1.25vw;
+	justify-content: center;
+	align-items: center;
+	gap: 0.417vw;
+	border-radius: 4.688vw;
+	background: var(--orange, #ff561f);
+	border: none;
+	outline: none;
+
+	color: var(--snow_white, #fff);
+	text-align: center;
+	font-family: 'Gilroy Medium';
+	font-size: 0.885vw;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+	.socialMedia {
+		gap: 2.878vw;
+		width: fit-content;
+	}
+
+	.buttonLinkSocialMedia {
+		height: 5.755vw;
+		padding: 1.199vw 2.878vw;
+		gap: 0.959vw;
+		border-radius: 10.791vw;
+		font-size: 2.038vw;
+
+		> img {
+			width: 2.015vw;
+		}
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.socialMedia {
+		gap: 5.581vw;
+		width: fit-content;
+	}
+
+	.buttonLinkSocialMedia {
+		height: 11.163vw;
+		padding: 2.326vw 5.581vw;
+		gap: 1.86vw;
+		border-radius: 20.93vw;
+		font-size: 3.953vw;
+
+		> img {
+			width: 4.878vw;
+		}
+	}
+}

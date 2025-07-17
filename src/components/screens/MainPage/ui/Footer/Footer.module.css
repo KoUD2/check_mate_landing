@@ -1,0 +1,173 @@
+.footer {
+	display: flex;
+	width: 98.75vw;
+	padding: 2.708vw;
+	flex-direction: column;
+	gap: 4.792vw;
+	border-radius: 2.5vw;
+	background: var(--black, #292929);
+	margin: 0.625vw auto 0 auto;
+}
+
+.logo {
+	width: 6.667vw;
+	height: 1.51vw;
+}
+
+.footerContainer {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	gap: 2.083vw;
+	align-self: stretch;
+
+	> h2 {
+		width: 37.566vw;
+		color: var(--snow_white, #fff);
+	}
+}
+
+.containerInner {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+}
+
+.contacts {
+	display: flex;
+	align-items: center;
+	gap: 2.813vw;
+}
+
+.docs {
+	display: flex;
+	flex-direction: column;
+	gap: 0.833vw;
+
+	p {
+		color: var(--snow_white, #fff);
+	}
+}
+
+.lines {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 0.417vw;
+	align-self: stretch;
+
+	> P {
+		cursor: pointer;
+		font-family: 'Gilroy Medium';
+		font-size: 0.885vw;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 110%;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+	.footer {
+		width: 97.122vw;
+		padding: 3.837vw;
+		gap: 11.031vw;
+		border-radius: 3.837vw;
+		margin: 1.439vw auto 0 auto;
+	}
+
+	.logo {
+		width: 16.187vw;
+		height: 3.837vw;
+	}
+
+	.footerContainer {
+		gap: 4.796vw;
+
+		> h2 {
+			font-size: 4.796vw;
+			line-height: 5.803vw;
+			width: auto;
+		}
+	}
+
+	.containerInner {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 4.796vw;
+	}
+
+	.contacts {
+		gap: 14.748vw;
+	}
+
+	.docs {
+		gap: 1.918vw;
+
+		> p {
+			font-size: 3.357vw;
+			font-weight: 600;
+		}
+	}
+
+	.lines {
+		gap: 0.417vw;
+
+		> P {
+			font-size: 1.799vw;
+		}
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.footer {
+		width: 92.558vw;
+		padding: 5.581vw 5.581vw 14.884vw 5.581vw;
+		gap: 21.395vw;
+		border-radius: 7.442vw;
+		margin: 2.791vw auto 0 auto;
+	}
+
+	.logo {
+		width: 23.256vw;
+		height: 5.349vw;
+	}
+
+	.footerContainer {
+		gap: 9.302vw;
+
+		> h2 {
+			font-size: 6.512vw;
+			line-height: 110%;
+			width: auto;
+		}
+	}
+
+	.containerInner {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 9.302vw;
+	}
+
+	.contacts {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 12.558vw;
+	}
+
+	.docs {
+		gap: 3.721vw;
+
+		> p {
+			font-size: 5.116vw;
+			font-weight: 500;
+		}
+	}
+
+	.lines {
+		gap: 1.86vw;
+
+		> P {
+			font-size: 3.953vw;
+		}
+	}
+}

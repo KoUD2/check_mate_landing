@@ -1,0 +1,70 @@
+.button {
+	cursor: pointer;
+	display: flex;
+	height: 2.5vw;
+	padding: 0.729vw 1.25vw;
+	justify-content: center;
+	align-items: center;
+	gap: 0.521vw;
+	border-radius: 5.208vw;
+	background: var(--snow_white, #fff);
+	border: none;
+	outline: none;
+	color: var(--black, #292929);
+}
+
+.buttonSmall {
+	width: fit-content;
+}
+
+.buttonLarge {
+	width: 26.667vw;
+}
+
+.buttonOrange {
+	background: var(--orange, #ff561f);
+	color: var(--snow_white, #fff);
+}
+
+.imageLogo {
+	width: 0.677vw;
+	height: auto;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+	.button {
+		height: 5.875vw;
+		padding: 1.679vw 2.878vw;
+		gap: 1.199vw;
+		border-radius: 11.99vw;
+		font-size: 2.038vw;
+	}
+
+	.buttonLarge {
+		width: 37.05vw;
+	}
+
+	.imageLogo {
+		width: 0.677vw;
+		height: auto;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.button {
+		height: 11.395vw;
+		padding: 3.256vw 5.581vw;
+		gap: 2.326vw;
+		border-radius: 23.256vw;
+		font-size: 3.953vw;
+	}
+
+	.buttonLarge {
+		width: 81.395vw;
+	}
+
+	.imageLogo {
+		width: 0.677vw;
+		height: auto;
+	}
+}

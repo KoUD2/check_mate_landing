@@ -1,0 +1,125 @@
+@import url('./_reset');
+@import url('./_vars');
+@import url('./fonts');
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	padding: 0.625vw 0vw;
+}
+
+h1 {
+	font-family: 'Gilroy Medium';
+	font-size: 4.167vw;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 100%;
+	letter-spacing: -0.167vw;
+}
+
+h2 {
+	font-family: 'Gilroy Medium';
+	font-size: 2.292vw;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 2.521vw;
+}
+
+h3 {
+	font-family: 'Gilroy Medium';
+	font-size: 1.667vw;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 110%;
+}
+
+p {
+	font-family: 'Gilroy Medium';
+	font-size: 1.146vw;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 120%;
+}
+
+button {
+	font-family: 'Gilroy SemiBold';
+	font-size: 0.885vw;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+	body {
+		padding: 0 0 1.476vw 0;
+	}
+
+	h1 {
+		font-family: 'Gilroy Medium';
+		font-size: 7.674vw;
+		font-style: normal;
+		font-weight: 600;
+		line-height: 100%;
+		letter-spacing: -0.384vw;
+	}
+
+	h2 {
+		font-size: 4.796vw;
+		line-height: 5.803vw;
+	}
+
+	h3 {
+		font-size: 3.357vw;
+	}
+
+	p {
+		font-size: 2.278vw;
+	}
+
+	button {
+		font-family: 'Gilroy SemiBold';
+		font-size: 0.885vw;
+		font-style: normal;
+		font-weight: 500;
+		line-height: normal;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	body {
+		padding: 0 0 3.721vw 0;
+		overflow-x: hidden;
+	}
+
+	h1 {
+		font-family: 'Gilroy Medium';
+		font-size: 8.372vw;
+		font-style: normal;
+		font-weight: 600;
+		line-height: 100%; /* 8.372vw */
+		letter-spacing: -0.465vw;
+	}
+
+	h2 {
+		font-size: 6.512vw;
+		line-height: 110%;
+	}
+
+	h3 {
+		font-size: 7.442vw;
+	}
+
+	p {
+		font-size: 5.116vw;
+	}
+
+	button {
+		font-family: 'Gilroy SemiBold';
+		font-size: 0.885vw;
+		font-style: normal;
+		font-weight: 500;
+		line-height: normal;
+	}
+}

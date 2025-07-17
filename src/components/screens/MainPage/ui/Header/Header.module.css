@@ -1,0 +1,220 @@
+.header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.logo {
+	width: 6.667vw;
+	height: auto;
+}
+
+.linksGroupe {
+	display: flex;
+	align-items: center;
+	gap: 1.615vw;
+}
+
+.link {
+	cursor: pointer;
+	background: transparent;
+	border: none;
+	outline: none;
+	font-family: 'Gilroy SemiBold';
+	font-size: 0.885vw;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+	color: var(--snow_white, #fff);
+}
+
+.menuOverlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background: #fff;
+	z-index: 1000;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+.mobileMenu {
+	margin-top: 4.08vw;
+	width: 91.85vw;
+	background: transparent;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
+}
+
+.closeButton {
+	position: absolute;
+	top: 0;
+	right: 0;
+	background: none;
+	border: none;
+	padding: 0;
+	cursor: pointer;
+	z-index: 2;
+
+	> svg {
+		width: 5.28vw;
+		height: 5.28vw;
+	}
+}
+
+.menuList {
+	margin-top: 7.65vw;
+	width: 91.85vw;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.menuItem,
+.menuItemActive {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+}
+
+.menuItemActive {
+	color: #ff4d19;
+	cursor: default;
+}
+
+.menuNumber,
+.menuNumberActive {
+	font-family: 'Gilroy Medium';
+	font-size: 7.67vw;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 100%; /* 7.67vw */
+	letter-spacing: 0.4vw;
+}
+.menuNumberActive {
+	color: #ff4d19;
+}
+
+.menuText,
+.menuTextActive {
+	margin-top: 1.92vw;
+	font-family: 'Gilroy Medium';
+	font-size: 2.04vw;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+}
+.menuTextActive {
+	color: #ff4d19;
+}
+
+.menuDivider {
+	width: 91.85vw;
+	height: 0.12vw;
+	border: none;
+	background: #292929;
+	margin: 5.76vw 0;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+	.logo {
+		width: 16.187vw;
+		height: auto;
+	}
+
+	.linksGroupe {
+		display: none;
+	}
+
+	.buttonHumburger {
+		width: 5.276vw;
+		height: 5.276vw;
+		border: none;
+		outline: none;
+		background-color: transparent;
+		display: flex;
+		flex-direction: column;
+		gap: 0.839vw;
+		align-items: center;
+		justify-content: center;
+
+		> div {
+			width: 4.077vw;
+			height: 0.24vw;
+			background-color: var(--snow_white, #fff);
+			border-radius: 1.439vw;
+		}
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.logo {
+		width: 23.256vw;
+		height: auto;
+	}
+
+	.linksGroupe {
+		display: none;
+	}
+
+	.buttonHumburger {
+		width: 10.233vw;
+		height: 10.233vw;
+		border: none;
+		outline: none;
+		background-color: transparent;
+		display: flex;
+		flex-direction: column;
+		gap: 1.628vw;
+		align-items: center;
+		justify-content: center;
+
+		> div {
+			width: 7.907vw;
+			height: 0.465vw;
+			background-color: var(--snow_white, #fff);
+			border-radius: 1.86vw;
+		}
+	}
+
+	.mobileMenu {
+		margin-top: 4.651vw;
+		width: 92.558vw;
+	}
+
+	.closeButton {
+		> svg {
+			width: 10.233vw;
+			height: 10.233vw;
+		}
+	}
+
+	.menuList {
+		margin-top: 22.791vw;
+		width: 92.558vw;
+	}
+
+	.menuNumber,
+	.menuNumberActive {
+		font-size: 8.372vw;
+	}
+
+	.menuText,
+	.menuTextActive {
+		font-size: 3.953vw;
+	}
+
+	.menuDivider {
+		width: 92.558vw;
+		height: 0.233vw;
+		margin: 11.163vw 0;
+	}
+}
