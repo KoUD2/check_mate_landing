@@ -25,7 +25,7 @@ const TariffCard: FC<ITariffCard> = ({
 
       <div className={styles.price}>
         <div className={styles.priceInner}>
-          <h2>{price} ₽</h2>
+          <div className={styles.priceAmount}>{price} ₽</div>
           <p>/{period}</p>
         </div>
 

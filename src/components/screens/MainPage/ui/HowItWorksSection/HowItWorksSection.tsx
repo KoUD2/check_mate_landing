@@ -144,7 +144,11 @@ const HowItWorksSection: FC = () => {
 
       {width <= 767 && (
         <div className={styles.buttonsArrows}>
-          <button className={styles.buttonNext} onClick={handlePrevClick}>
+          <button
+            className={styles.buttonNext}
+            onClick={handlePrevClick}
+            aria-label="Предыдущая карточка"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
@@ -162,7 +166,11 @@ const HowItWorksSection: FC = () => {
               />
             </svg>
           </button>
-          <button className={styles.buttonNext} onClick={handleNextClick}>
+          <button
+            className={styles.buttonNext}
+            onClick={handleNextClick}
+            aria-label="Следующая карточка"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"

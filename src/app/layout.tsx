@@ -107,6 +107,10 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-title" content="CheckMate" />
         <meta name="application-name" content="CheckMate" />
 
+        {/* Cookie и Privacy настройки */}
+        <meta httpEquiv="Set-Cookie" content="SameSite=Strict; Secure" />
+        <meta name="referrer" content="strict-origin-when-cross-origin" />
+
         {/* Structured Data */}
         <script
           type="application/ld+json"

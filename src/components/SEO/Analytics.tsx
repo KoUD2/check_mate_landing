@@ -6,8 +6,8 @@ interface AnalyticsProps {
 }
 
 const Analytics: React.FC<AnalyticsProps> = ({
-  googleAnalyticsId = "G-XXXXXXXXXX",
-  yandexMetricaId = "XXXXXXXX",
+  googleAnalyticsId,
+  yandexMetricaId,
 }) => {
   return (
     <>
@@ -26,7 +26,11 @@ const Analytics: React.FC<AnalyticsProps> = ({
               gtag('config', '${googleAnalyticsId}', {
                 page_title: document.title,
                 page_location: window.location.href,
-                send_page_view: true
+                send_page_view: true,
+                anonymize_ip: true,
+                storage: 'none',
+                client_storage: 'none',
+                ads_data_redaction: true
               });
               
               // Отслеживание конверсий
@@ -52,9 +56,13 @@ const Analytics: React.FC<AnalyticsProps> = ({
                 clickmap:true,
                 trackLinks:true,
                 accurateTrackBounce:true,
-                webvisor:true,
+                webvisor:false,
                 trackHash:true,
-                ecommerce:"dataLayer"
+                ecommerce:"dataLayer",
+                defer: true,
+                params: {
+                  nohit: false
+                }
               });
             `}
           </Script>
@@ -71,50 +79,71 @@ const Analytics: React.FC<AnalyticsProps> = ({
       )}
 
       {/* Structured Data для отслеживания событий */}
-      <Script id="conversion-tracking" strategy="afterInteractive">
-        {`
-          // Функция для отслеживания кликов по кнопкам
-          function trackButtonClick(buttonName, section) {
-            if (typeof gtag !== 'undefined') {
-              gtag('event', 'click', {
-                event_category: 'button',
-                event_label: buttonName,
-                event_location: section
-              });
-            }
-            if (typeof ym !== 'undefined') {
-              ym(${yandexMetricaId}, 'reachGoal', 'button_click', {
-                button: buttonName,
-                section: section
-              });
-            }
-          }
-
-          // Функция для отслеживания скролла
-          function trackScroll() {
-            let scrollTracked = false;
-            window.addEventListener('scroll', function() {
-              if (!scrollTracked && window.scrollY > window.innerHeight * 0.5) {
-                scrollTracked = true;
+      {(googleAnalyticsId || yandexMetricaId) && (
+        <Script id="conversion-tracking" strategy="afterInteractive">
+          {`
+            // Функция для отслеживания кликов по кнопкам
+            function trackButtonClick(buttonName, section) {
+              ${
+                googleAnalyticsId
+                  ? `
                 if (typeof gtag !== 'undefined') {
-                  gtag('event', 'scroll', {
-                    event_category: 'engagement',
-                    event_label: '50% page scroll'
+                  gtag('event', 'click', {
+                    event_category: 'button',
+                    event_label: buttonName,
+                    event_location: section
                   });
                 }
+              `
+                  : ""
               }
+              
+              ${
+                yandexMetricaId
+                  ? `
+                if (typeof ym !== 'undefined') {
+                  ym(${yandexMetricaId}, 'reachGoal', 'button_click', {
+                    button: buttonName,
+                    section: section
+                  });
+                }
+              `
+                  : ""
+              }
+            }
+
+            // Функция для отслеживания скролла
+            function trackScroll() {
+              let scrollTracked = false;
+              window.addEventListener('scroll', function() {
+                if (!scrollTracked && window.scrollY > window.innerHeight * 0.5) {
+                  scrollTracked = true;
+                  ${
+                    googleAnalyticsId
+                      ? `
+                    if (typeof gtag !== 'undefined') {
+                      gtag('event', 'scroll', {
+                        event_category: 'engagement',
+                        event_label: '50% page scroll'
+                      });
+                    }
+                  `
+                      : ""
+                  }
+                }
+              });
+            }
+
+            // Инициализация отслеживания
+            document.addEventListener('DOMContentLoaded', function() {
+              trackScroll();
             });
-          }
 
-          // Инициализация отслеживания
-          document.addEventListener('DOMContentLoaded', function() {
-            trackScroll();
-          });
-
-          // Экспорт функций для использования в компонентах
-          window.trackButtonClick = trackButtonClick;
-        `}
-      </Script>
+            // Экспорт функций для использования в компонентах
+            window.trackButtonClick = trackButtonClick;
+          `}
+        </Script>
+      )}
     </>
   );
 };

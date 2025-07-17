@@ -37,6 +37,11 @@ const nextConfig: NextConfig = {
 
   // Оптимизация bundle
   webpack: (config, { dev, isServer }) => {
+    // Настройки source maps для production
+    if (!dev && !isServer) {
+      config.devtool = "source-map";
+    }
+
     // Оптимизация размера bundle
     if (!dev && !isServer) {
       config.optimization.splitChunks = {
@@ -105,7 +110,16 @@ const nextConfig: NextConfig = {
           },
           {
             key: "Permissions-Policy",
-            value: "camera=(), microphone=(), geolocation=()",
+            value:
+              "camera=(), microphone=(), geolocation=(), interest-cohort=()",
+          },
+          {
+            key: "Cross-Origin-Embedder-Policy",
+            value: "unsafe-none",
+          },
+          {
+            key: "Cross-Origin-Opener-Policy",
+            value: "same-origin-allow-popups",
           },
         ],
       },
@@ -163,8 +177,8 @@ const nextConfig: NextConfig = {
   // Оптимизация для различных платформ
   output: "standalone",
 
-  // Настройки для production
-  productionBrowserSourceMaps: false,
+  // Настройки для production - включаем source maps для отладки
+  productionBrowserSourceMaps: true,
 
   // TypeScript настройки
   typescript: {
