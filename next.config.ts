@@ -4,7 +4,7 @@ import path from "path";
 const nextConfig: NextConfig = {
   // Экспериментальные функции для улучшения производительности
   experimental: {
-    optimizeCss: true,
+    // optimizeCss: true, // Отключено из-за отсутствия critters
     optimizePackageImports: ["next/image", "react"],
     optimizeServerReact: true,
   },
