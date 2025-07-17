@@ -81,6 +81,7 @@ const Header: FC = () => {
           <button
             className={styles.buttonHumburger}
             onClick={() => setMenuOpen(true)}
+            aria-label="Открыть меню навигации"
           >
             <div></div>
             <div></div>

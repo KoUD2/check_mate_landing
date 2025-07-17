@@ -1,23 +1,23 @@
 .userSection {
-	display: flex;
-	align-items: center;
-	width: fit-content;
-	gap: 1.042vw;
-	margin: 3.333vw auto 6.25vw auto;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  gap: 1.042vw;
+  margin: 3.333vw auto 6.25vw auto;
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
-	.userSection {
-		flex-direction: column;
-		gap: 1.439vw;
-		margin: 4.436vw auto 14.388vw auto;
-	}
+  .userSection {
+    flex-direction: column;
+    gap: 1.439vw;
+    margin: 4.436vw auto 14.388vw auto;
+  }
 }
 
 @media screen and (max-width: 767px) {
-	.userSection {
-		flex-direction: column;
-		gap: 2.791vw;
-		margin: 9.302vw auto 27.907vw auto;
-	}
+  .userSection {
+    flex-direction: column;
+    gap: 2.791vw;
+    margin: 9.302vw auto 27.907vw auto;
+  }
 }

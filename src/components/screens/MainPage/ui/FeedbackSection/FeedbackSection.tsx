@@ -78,6 +78,7 @@ const FeedbackSection: FC = () => {
               className={styles.buttonNext}
               onClick={handlePrevClick}
               disabled={currentCard === 0}
+              aria-label="Предыдущий отзыв"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -100,6 +101,7 @@ const FeedbackSection: FC = () => {
               className={styles.buttonNext}
               onClick={handleNextClick}
               disabled={currentCard === 1}
+              aria-label="Следующий отзыв"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
