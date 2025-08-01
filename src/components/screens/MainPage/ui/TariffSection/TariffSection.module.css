@@ -41,7 +41,7 @@
 	border: none;
 	outline: none;
 	background: transparent;
-	color: var(--grey, #a1a1a1);
+	color: var(--grey, #757575);
 }
 
 .buttonPeriodActive {

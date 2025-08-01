@@ -29,7 +29,7 @@
 	gap: 0.208vw;
 
 	> p:nth-child(1) {
-		color: var(--grey, #a1a1a1);
+		color: var(--grey, #757575);
 	}
 }
 
@@ -83,7 +83,7 @@
 		}
 
 		> p {
-			color: var(--grey, #a1a1a1);
+			color: var(--grey, #757575);
 			font-family: 'Gilroy Medium';
 			font-size: 0.885vw;
 			font-style: normal;
@@ -93,7 +93,7 @@
 	}
 
 	> p {
-		color: var(--grey, #a1a1a1);
+		color: var(--grey, #757575);
 		font-family: 'Gilroy Medium';
 		font-size: 0.885vw;
 		font-style: normal;

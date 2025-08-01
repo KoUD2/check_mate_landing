@@ -1,218 +1,218 @@
 .apiSection {
-  position: relative;
-  width: 94.583vw;
-  height: 40.938vw;
-  margin-bottom: 6.25vw;
-  display: flex;
-  flex-direction: column;
+	position: relative;
+	width: 94.583vw;
+	height: 40.938vw;
+	margin-bottom: 6.25vw;
+	display: flex;
+	flex-direction: column;
 }
 
 .headingGroup {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.25vw;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1.25vw;
 }
 
 .lines {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  align-self: stretch;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	align-self: stretch;
 
-  > p:nth-child(1) {
-    color: var(--grey, #a1a1a1);
-  }
+	> p:nth-child(1) {
+		color: var(--grey, #757575);
+	}
 }
 
 .cardApi {
-  position: relative;
-  width: 38.698vw;
-  height: 30vw;
-  margin-left: 8.073vw;
-  flex-shrink: 0;
+	position: relative;
+	width: 38.698vw;
+	height: 30vw;
+	margin-left: 8.073vw;
+	flex-shrink: 0;
 }
 
 .cardInfo {
-  position: absolute;
-  top: 0.609vw;
-  left: 5.369vw;
-  display: flex;
-  width: 15.096vw;
-  transform: rotate(4.853deg);
-  padding: 0.938vw 1.042vw;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 1.042vw;
-  border-radius: 0.938vw;
-  border: 0.052vw solid var(--white, #f8f8f8);
-  background: var(--snow_white, #fff);
+	position: absolute;
+	top: 0.609vw;
+	left: 5.369vw;
+	display: flex;
+	width: 15.096vw;
+	transform: rotate(4.853deg);
+	padding: 0.938vw 1.042vw;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 1.042vw;
+	border-radius: 0.938vw;
+	border: 0.052vw solid var(--white, #f8f8f8);
+	background: var(--snow_white, #fff);
 
-  /* shadow-1 */
-  box-shadow: 0vw 0.885vw 1.927vw 0vw rgba(16, 55, 132, 0.03),
-    0vw 3.49vw 3.49vw 0vw rgba(16, 55, 132, 0.03),
-    0vw 7.813vw 4.688vw 0vw rgba(16, 55, 132, 0.02);
+	/* shadow-1 */
+	box-shadow: 0vw 0.885vw 1.927vw 0vw rgba(16, 55, 132, 0.03),
+		0vw 3.49vw 3.49vw 0vw rgba(16, 55, 132, 0.03),
+		0vw 7.813vw 4.688vw 0vw rgba(16, 55, 132, 0.02);
 
-  > h3 {
-    color: var(--black, #292929);
+	> h3 {
+		color: var(--black, #292929);
 
-    font-family: "Gilroy Medium";
-    font-size: 0.885vw;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 110%;
-  }
+		font-family: 'Gilroy Medium';
+		font-size: 0.885vw;
+		font-style: normal;
+		font-weight: 600;
+		line-height: 110%;
+	}
 
-  > p {
-    color: var(--grey, #a1a1a1);
+	> p {
+		color: var(--grey, #757575);
 
-    font-family: "Gilroy Medium";
-    font-size: 0.885vw;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 110%;
-  }
+		font-family: 'Gilroy Medium';
+		font-size: 0.885vw;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 110%;
+	}
 }
 
 .cardInfo2 {
-  top: 7.126vw;
-  left: 19.396vw;
-  transform: rotate(-2.432deg);
-  /* shadow-1 */
-  box-shadow: 0vw 0.885vw 1.927vw 0vw rgba(16, 55, 132, 0.03),
-    0vw 3.49vw 3.49vw 0vw rgba(16, 55, 132, 0.03),
-    0vw 7.813vw 4.688vw 0vw rgba(16, 55, 132, 0.02);
+	top: 7.126vw;
+	left: 19.396vw;
+	transform: rotate(-2.432deg);
+	/* shadow-1 */
+	box-shadow: 0vw 0.885vw 1.927vw 0vw rgba(16, 55, 132, 0.03),
+		0vw 3.49vw 3.49vw 0vw rgba(16, 55, 132, 0.03),
+		0vw 7.813vw 4.688vw 0vw rgba(16, 55, 132, 0.02);
 }
 
 .imageAPI {
-  position: absolute;
-  width: 46.406vw;
-  height: 29.688vw;
-  top: 8.958vw;
-  right: 12.969vw;
+	position: absolute;
+	width: 46.406vw;
+	height: 29.688vw;
+	top: 8.958vw;
+	right: 12.969vw;
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
-  .apiSection {
-    width: 91.847vw;
-    height: 112.47vw;
-    margin: 0 auto 14.388vw auto;
-  }
+	.apiSection {
+		width: 91.847vw;
+		height: 112.47vw;
+		margin: 0 auto 14.388vw auto;
+	}
 
-  .headingGroup {
-    gap: 2.878vw;
-  }
+	.headingGroup {
+		gap: 2.878vw;
+	}
 
-  .cardApi {
-    width: 91.847vw;
-    height: 69.065vw;
-    margin-top: 5.755vw;
-    margin-left: 2.638vw;
-  }
+	.cardApi {
+		width: 91.847vw;
+		height: 69.065vw;
+		margin-top: 5.755vw;
+		margin-left: 2.638vw;
+	}
 
-  .cardInfo {
-    top: 1.409vw;
-    left: 13.436vw;
-    width: 34.293vw;
-    padding: 2.158vw 2.398vw;
-    gap: 2.398vw;
-    border-radius: 2.158vw;
-    border: 0.12vw solid var(--white, #f8f8f8);
+	.cardInfo {
+		top: 1.409vw;
+		left: 13.436vw;
+		width: 34.293vw;
+		padding: 2.158vw 2.398vw;
+		gap: 2.398vw;
+		border-radius: 2.158vw;
+		border: 0.12vw solid var(--white, #f8f8f8);
 
-    /* shadow-1 */
-    box-shadow: 0vw 2.038vw 4.436vw 0vw rgba(16, 55, 132, 0.03),
-      0vw 8.034vw 8.034vw 0vw rgba(16, 55, 132, 0.03),
-      0vw 17.986vw 10.791vw 0vw rgba(16, 55, 132, 0.02);
+		/* shadow-1 */
+		box-shadow: 0vw 2.038vw 4.436vw 0vw rgba(16, 55, 132, 0.03),
+			0vw 8.034vw 8.034vw 0vw rgba(16, 55, 132, 0.03),
+			0vw 17.986vw 10.791vw 0vw rgba(16, 55, 132, 0.02);
 
-    > h3 {
-      font-size: 1.799vw;
-    }
+		> h3 {
+			font-size: 1.799vw;
+		}
 
-    > p {
-      font-size: 1.799vw;
-    }
-  }
+		> p {
+			font-size: 1.799vw;
+		}
+	}
 
-  .cardInfo2 {
-    top: 4.912vw;
-    left: 44.514vw;
-    /* shadow-1 */
-    box-shadow: 0vw 2.038vw 4.436vw 0vw rgba(16, 55, 132, 0.03),
-      0vw 8.034vw 8.034vw 0vw rgba(16, 55, 132, 0.03),
-      0vw 17.986vw 10.791vw 0vw rgba(16, 55, 132, 0.02);
-  }
+	.cardInfo2 {
+		top: 4.912vw;
+		left: 44.514vw;
+		/* shadow-1 */
+		box-shadow: 0vw 2.038vw 4.436vw 0vw rgba(16, 55, 132, 0.03),
+			0vw 8.034vw 8.034vw 0vw rgba(16, 55, 132, 0.03),
+			0vw 17.986vw 10.791vw 0vw rgba(16, 55, 132, 0.02);
+	}
 
-  .imageAPI {
-    width: 91.847vw;
-    height: 58.873vw;
-    top: 53.597vw;
-    right: 0;
-  }
+	.imageAPI {
+		width: 91.847vw;
+		height: 58.873vw;
+		top: 53.597vw;
+		right: 0;
+	}
 }
 
 @media screen and (max-width: 767px) {
-  .apiSection {
-    width: 92.558vw;
-    height: 159.07vw;
-    margin: 0 auto 27.907vw auto;
-  }
+	.apiSection {
+		width: 92.558vw;
+		height: 159.07vw;
+		margin: 0 auto 27.907vw auto;
+	}
 
-  .headingGroup {
-    gap: 3.721vw;
-  }
+	.headingGroup {
+		gap: 3.721vw;
+	}
 
-  .lines {
-    > p {
-      width: 84.186vw;
-      text-align: center;
-      font-size: 4.186vw !important;
-    }
-  }
+	.lines {
+		> p {
+			width: 84.186vw;
+			text-align: center;
+			font-size: 4.186vw !important;
+		}
+	}
 
-  .cardApi {
-    width: 92.558vw;
-    height: 137.674vw;
-    margin-top: 5.581vw;
-    margin-left: 0;
-  }
+	.cardApi {
+		width: 92.558vw;
+		height: 137.674vw;
+		margin-top: 5.581vw;
+		margin-left: 0;
+	}
 
-  .cardInfo {
-    top: 1.916vw;
-    left: 4.958vw;
-    width: 51.163vw;
-    padding: 4.186vw 4.651vw;
-    gap: 4.651vw;
-    border-radius: 4.186vw;
-    border: 0.233vw solid var(--white, #f8f8f8);
+	.cardInfo {
+		top: 1.916vw;
+		left: 4.958vw;
+		width: 51.163vw;
+		padding: 4.186vw 4.651vw;
+		gap: 4.651vw;
+		border-radius: 4.186vw;
+		border: 0.233vw solid var(--white, #f8f8f8);
 
-    /* shadow-1 */
-    box-shadow: 0vw 3.953vw 8.605vw 0vw rgba(16, 55, 132, 0.03),
-      0vw 15.581vw 15.581vw 0vw rgba(16, 55, 132, 0.03),
-      0vw 34.884vw 20.93vw 0vw rgba(16, 55, 132, 0.02);
+		/* shadow-1 */
+		box-shadow: 0vw 3.953vw 8.605vw 0vw rgba(16, 55, 132, 0.03),
+			0vw 15.581vw 15.581vw 0vw rgba(16, 55, 132, 0.03),
+			0vw 34.884vw 20.93vw 0vw rgba(16, 55, 132, 0.02);
 
-    > h3 {
-      font-size: 3.256vw;
-    }
+		> h3 {
+			font-size: 3.256vw;
+		}
 
-    > p {
-      font-size: 3.256vw;
-    }
-  }
+		> p {
+			font-size: 3.256vw;
+		}
+	}
 
-  .cardInfo2 {
-    top: 18.24vw;
-    left: 40.835vw;
-    width: 52.053vw;
-    /* shadow-1 */
-    box-shadow: 0vw 3.953vw 8.605vw 0vw rgba(16, 55, 132, 0.03),
-      0vw 15.581vw 15.581vw 0vw rgba(16, 55, 132, 0.03),
-      0vw 34.884vw 20.93vw 0vw rgba(16, 55, 132, 0.02);
-  }
+	.cardInfo2 {
+		top: 18.24vw;
+		left: 40.835vw;
+		width: 52.053vw;
+		/* shadow-1 */
+		box-shadow: 0vw 3.953vw 8.605vw 0vw rgba(16, 55, 132, 0.03),
+			0vw 15.581vw 15.581vw 0vw rgba(16, 55, 132, 0.03),
+			0vw 34.884vw 20.93vw 0vw rgba(16, 55, 132, 0.02);
+	}
 
-  .imageAPI {
-    width: 92.558vw;
-    height: 59.302vw;
-    top: 99.767vw;
-    right: 0;
-  }
+	.imageAPI {
+		width: 92.558vw;
+		height: 59.302vw;
+		top: 99.767vw;
+		right: 0;
+	}
 }

@@ -1,127 +1,127 @@
 .feedbackCard {
-  display: flex;
-  width: 22.865vw;
-  padding: 2.083vw;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 6.25vw;
-  align-self: stretch;
-  border-radius: 2.083vw;
-  border: 0.052vw solid var(--white, #f8f8f8);
-  background: var(--snow_white, #fff);
-  transition: all 0.3s ease-out;
+	display: flex;
+	width: 22.865vw;
+	padding: 2.083vw;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 6.25vw;
+	align-self: stretch;
+	border-radius: 2.083vw;
+	border: 0.052vw solid var(--white, #f8f8f8);
+	background: var(--snow_white, #fff);
+	transition: all 0.3s ease-out;
 
-  > img {
-    width: 4.167vw;
-    height: 4.167vw;
-  }
+	> img {
+		width: 4.167vw;
+		height: 4.167vw;
+	}
 }
 
 .feedbackCard:hover {
-  background: var(--snow_white, #fff);
+	background: var(--snow_white, #fff);
 
-  /* shadow-1 */
-  box-shadow: 0vw 0.885vw 1.927vw 0vw rgba(16, 55, 132, 0.03),
-    0vw 3.49vw 3.49vw 0vw rgba(16, 55, 132, 0.03),
-    0vw 7.813vw 4.688vw 0vw rgba(16, 55, 132, 0.02);
+	/* shadow-1 */
+	box-shadow: 0vw 0.885vw 1.927vw 0vw rgba(16, 55, 132, 0.03),
+		0vw 3.49vw 3.49vw 0vw rgba(16, 55, 132, 0.03),
+		0vw 7.813vw 4.688vw 0vw rgba(16, 55, 132, 0.02);
 }
 
 .textReview {
-  display: flex;
-  flex-direction: column;
-  gap: 2.083vw;
+	display: flex;
+	flex-direction: column;
+	gap: 2.083vw;
 }
 
 .headingReview {
-  display: flex;
-  flex-direction: column;
-  gap: 0.417vw;
+	display: flex;
+	flex-direction: column;
+	gap: 0.417vw;
 
-  > h3 {
-    color: var(--black, #292929);
-    font-family: "Gilroy Medium";
-    font-size: 1.667vw;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 100%;
-  }
+	> h3 {
+		color: var(--black, #292929);
+		font-family: 'Gilroy Medium';
+		font-size: 1.667vw;
+		font-style: normal;
+		font-weight: 600;
+		line-height: 100%;
+	}
 
-  > p {
-    color: var(--grey, #a1a1a1);
-    font-family: "Gilroy Medium";
-    font-size: 1.146vw;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 120%;
-  }
+	> p {
+		color: var(--grey, #757575);
+		font-family: 'Gilroy Medium';
+		font-size: 1.146vw;
+		font-style: normal;
+		font-weight: 500;
+		line-height: 120%;
+	}
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
-  .feedbackCard {
-    width: 50.24vw;
-    padding: 4.796vw;
-    gap: 9.592vw;
-    border-radius: 4.796vw;
-    border: 0.12vw solid var(--white, #f8f8f8);
+	.feedbackCard {
+		width: 50.24vw;
+		padding: 4.796vw;
+		gap: 9.592vw;
+		border-radius: 4.796vw;
+		border: 0.12vw solid var(--white, #f8f8f8);
 
-    > img {
-      width: 9.592vw;
-      height: 9.592vw;
-    }
-  }
+		> img {
+			width: 9.592vw;
+			height: 9.592vw;
+		}
+	}
 
-  .textReview {
-    gap: 4.796vw;
-  }
+	.textReview {
+		gap: 4.796vw;
+	}
 
-  .sliderWrapper {
-    overflow: hidden;
-    width: 100vw;
-  }
+	.sliderWrapper {
+		overflow: hidden;
+		width: 100vw;
+	}
 
-  .headingReview {
-    gap: 0.959vw;
+	.headingReview {
+		gap: 0.959vw;
 
-    > h3 {
-      font-size: 3.357vw;
-      line-height: 110%;
-    }
+		> h3 {
+			font-size: 3.357vw;
+			line-height: 110%;
+		}
 
-    > p {
-      font-size: 2.278vw;
-    }
-  }
+		> p {
+			font-size: 2.278vw;
+		}
+	}
 }
 
 @media screen and (max-width: 767px) {
-  .feedbackCard {
-    width: 92.558vw;
-    padding: 5.581vw;
-    gap: 11.163vw;
-    border-radius: 7.442vw;
-    border: 0.233vw solid var(--white, #f8f8f8);
+	.feedbackCard {
+		width: 92.558vw;
+		padding: 5.581vw;
+		gap: 11.163vw;
+		border-radius: 7.442vw;
+		border: 0.233vw solid var(--white, #f8f8f8);
 
-    > img {
-      width: 18.605vw;
-      height: 18.605vw;
-    }
-  }
+		> img {
+			width: 18.605vw;
+			height: 18.605vw;
+		}
+	}
 
-  .textReview {
-    gap: 5.581vw;
-  }
+	.textReview {
+		gap: 5.581vw;
+	}
 
-  .headingReview {
-    gap: 1.86vw;
-    width: 49.767vw;
+	.headingReview {
+		gap: 1.86vw;
+		width: 49.767vw;
 
-    > h3 {
-      font-size: 5.581vw;
-      line-height: 110%;
-    }
+		> h3 {
+			font-size: 5.581vw;
+			line-height: 110%;
+		}
 
-    > p {
-      font-size: 4.186vw;
-    }
-  }
+		> p {
+			font-size: 4.186vw;
+		}
+	}
 }
