@@ -28,7 +28,7 @@
 	> p {
 		color: var(--black, #292929);
 
-		font-family: Gilroy;
+		font-family: 'Gilroy Medium';
 		font-size: 0.885vw;
 		font-style: normal;
 		font-weight: 400;
