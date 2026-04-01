@@ -9,6 +9,9 @@ const nextConfig: NextConfig = {
     optimizeServerReact: true,
   },
 
+  // Turbopack (default in Next.js 16)
+  turbopack: {},
+
   // Оптимизация компиляции
   compiler: {
     removeConsole: process.env.NODE_ENV === "production",
@@ -26,64 +29,18 @@ const nextConfig: NextConfig = {
     minimumCacheTTL: 60 * 60 * 24 * 365, // 1 год кэш
     dangerouslyAllowSVG: true,
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
-    domains: ["checkmate.ai"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "checkmate.ai",
+      },
+    ],
     unoptimized: false,
   },
 
   // Настройки production build
   env: {
     CUSTOM_KEY: process.env.NODE_ENV,
-  },
-
-  // Оптимизация bundle
-  webpack: (config, { dev, isServer }) => {
-    // Настройки source maps для production
-    if (!dev && !isServer) {
-      config.devtool = "source-map";
-    }
-
-    // Оптимизация размера bundle
-    if (!dev && !isServer) {
-      config.optimization.splitChunks = {
-        chunks: "all",
-        cacheGroups: {
-          vendor: {
-            test: /[\\/]node_modules[\\/]/,
-            name: "vendors",
-            priority: 10,
-            enforce: true,
-          },
-          common: {
-            name: "common",
-            minChunks: 2,
-            priority: 5,
-            reuseExistingChunk: true,
-          },
-        },
-      };
-    }
-
-    // Алиасы для более быстрого разрешения модулей
-    config.resolve.alias = {
-      ...config.resolve.alias,
-      "@": path.resolve("./src"),
-    };
-
-    // Добавляем bundle analyzer в development режиме
-    if (!isServer && process.env.ANALYZE === "true") {
-      const BundleAnalyzerPlugin = eval("require")(
-        "webpack-bundle-analyzer"
-      ).BundleAnalyzerPlugin;
-      config.plugins.push(
-        new BundleAnalyzerPlugin({
-          analyzerMode: "server",
-          analyzerPort: isServer ? 8888 : 8889,
-          openAnalyzer: true,
-        })
-      );
-    }
-
-    return config;
   },
 
   // Заголовки безопасности и кэширования
@@ -183,12 +140,6 @@ const nextConfig: NextConfig = {
   // TypeScript настройки
   typescript: {
     ignoreBuildErrors: false,
-  },
-
-  // ESLint настройки
-  eslint: {
-    ignoreDuringBuilds: false,
-    dirs: ["src"],
   },
 
   // Настройки трейсинга

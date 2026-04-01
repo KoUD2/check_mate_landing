@@ -1,6 +1,6 @@
-@import url('./_reset');
-@import url('./_vars');
-@import url('./fonts');
+@import url('./_reset.css');
+@import url('./_vars.css');
+@import url('./fonts.css');
 
 * {
 	box-sizing: border-box;
