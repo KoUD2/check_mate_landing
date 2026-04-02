@@ -73,7 +73,7 @@ export const metadata: Metadata = {
   },
   verification: {
     google: "your-google-verification-code",
-    yandex: "your-yandex-verification-code",
+    yandex: "c435d1462a7f89ce",
   },
   alternates: {
     canonical: "https://checkmate.ai",
