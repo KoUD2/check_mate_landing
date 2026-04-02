@@ -147,21 +147,12 @@ export default function Home() {
                   "offers": {
                     "@type": "Offer",
                     "name": "CheckMate Plus на месяц",
+                    "price": "549",
                     "priceCurrency": "RUB",
                     "priceValidUntil": "2026-12-31",
                     "availability": "https://schema.org/InStock",
                     "url": "https://t.me/checkmate_ai_bot",
-                    "seller": { "@type": "Organization", "name": "CheckMate" },
-                    "priceSpecification": {
-                      "@type": "UnitPriceSpecification",
-                      "price": "549",
-                      "priceCurrency": "RUB",
-                      "billingDuration": {
-                        "@type": "QuantitativeValue",
-                        "value": 1,
-                        "unitCode": "MON"
-                      }
-                    }
+                    "seller": { "@type": "Organization", "name": "CheckMate" }
                   }
                 }
               },
@@ -178,21 +169,12 @@ export default function Home() {
                   "offers": {
                     "@type": "Offer",
                     "name": "CheckMate Pro на месяц",
+                    "price": "990",
                     "priceCurrency": "RUB",
                     "priceValidUntil": "2026-12-31",
                     "availability": "https://schema.org/InStock",
                     "url": "https://t.me/checkmate_ai_bot",
-                    "seller": { "@type": "Organization", "name": "CheckMate" },
-                    "priceSpecification": {
-                      "@type": "UnitPriceSpecification",
-                      "price": "990",
-                      "priceCurrency": "RUB",
-                      "billingDuration": {
-                        "@type": "QuantitativeValue",
-                        "value": 1,
-                        "unitCode": "MON"
-                      }
-                    }
+                    "seller": { "@type": "Organization", "name": "CheckMate" }
                   }
                 }
               },
@@ -209,21 +191,12 @@ export default function Home() {
                   "offers": {
                     "@type": "Offer",
                     "name": "CheckMate Plus на год",
+                    "price": "5490",
                     "priceCurrency": "RUB",
                     "priceValidUntil": "2026-12-31",
                     "availability": "https://schema.org/InStock",
                     "url": "https://t.me/checkmate_ai_bot",
-                    "seller": { "@type": "Organization", "name": "CheckMate" },
-                    "priceSpecification": {
-                      "@type": "UnitPriceSpecification",
-                      "price": "5490",
-                      "priceCurrency": "RUB",
-                      "billingDuration": {
-                        "@type": "QuantitativeValue",
-                        "value": 1,
-                        "unitCode": "ANN"
-                      }
-                    }
+                    "seller": { "@type": "Organization", "name": "CheckMate" }
                   }
                 }
               },
@@ -240,21 +213,12 @@ export default function Home() {
                   "offers": {
                     "@type": "Offer",
                     "name": "CheckMate Pro на год",
+                    "price": "8900",
                     "priceCurrency": "RUB",
                     "priceValidUntil": "2026-12-31",
                     "availability": "https://schema.org/InStock",
                     "url": "https://t.me/checkmate_ai_bot",
-                    "seller": { "@type": "Organization", "name": "CheckMate" },
-                    "priceSpecification": {
-                      "@type": "UnitPriceSpecification",
-                      "price": "8900",
-                      "priceCurrency": "RUB",
-                      "billingDuration": {
-                        "@type": "QuantitativeValue",
-                        "value": 1,
-                        "unitCode": "ANN"
-                      }
-                    }
+                    "seller": { "@type": "Organization", "name": "CheckMate" }
                   }
                 }
               }
