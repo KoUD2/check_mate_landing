@@ -5,7 +5,7 @@ import { IUserCard } from './UserCard.props'
 
 const UserCard: FC<IUserCard> = ({ smallText, header, imageSrc }) => {
 	return (
-		<div className={styles.userCard}>
+		<article className={styles.userCard}>
 			<div className={styles.cardHeading}>
 				<div className={styles.tip}>
 					<p>{smallText}</p>
@@ -16,11 +16,11 @@ const UserCard: FC<IUserCard> = ({ smallText, header, imageSrc }) => {
 
 			<Image
 				src={imageSrc}
-				alt='Иллюстрация'
+				alt={`Иллюстрация — CheckMate для категории: ${header}`}
 				className={styles.userImage}
 				draggable={false}
 			/>
-		</div>
+		</article>
 	)
 }
 

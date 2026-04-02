@@ -24,7 +24,7 @@ const Footer: FC = () => {
     <footer className={styles.footer}>
       <Image
         src={logo}
-        alt="Логотип"
+        alt="Логотип CheckMate"
         draggable={false}
         className={styles.logo}
       />
@@ -33,7 +33,7 @@ const Footer: FC = () => {
         <h2>Делимся обновлениями продукта и полезными материалами</h2>
 
         <div className={styles.containerInner}>
-          <div className={styles.contacts}>
+          <nav className={styles.contacts} aria-label="Социальные сети">
             <SocialMedia
               text="Читать статьи"
               imageSrc={Yandex_Zen_logo_icon}
@@ -52,14 +52,14 @@ const Footer: FC = () => {
               header="ВКонтакте"
               func={handleVkButtonClick}
             />
-          </div>
+          </nav>
 
           <div className={styles.docs}>
             <p>Документы</p>
 
             <div className={styles.lines}>
-              <p>Политика конфиденциальности</p>
-              <p>Условия использования</p>
+              <a href="/privacy" className={styles.docLink}>Политика конфиденциальности</a>
+              <a href="/terms" className={styles.docLink}>Условия использования</a>
             </div>
           </div>
         </div>

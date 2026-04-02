@@ -4,7 +4,7 @@ import { ICardInfo } from './CardInfo.props'
 
 const CardInfo: FC<ICardInfo> = ({ number, header, description, children }) => {
 	return (
-		<div className={styles.cardInfo}>
+		<article className={styles.cardInfo}>
 			<div className={styles.headingCard}>
 				<div className={styles.count}>
 					<h3>{number}</h3>
@@ -17,7 +17,7 @@ const CardInfo: FC<ICardInfo> = ({ number, header, description, children }) => {
 			</div>
 
 			{children}
-		</div>
+		</article>
 	)
 }
 

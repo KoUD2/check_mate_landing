@@ -33,9 +33,9 @@ const TariffSection: FC = () => {
   const currentData = tariffData[activePeriod];
 
   return (
-    <div className={styles.tariffSection}>
+    <section className={styles.tariffSection} aria-label="Тарифные планы">
       <div className={styles.headSection}>
-        <h2>Тарифы</h2>
+        <h2 id="tariffs-heading">Тарифы</h2>
 
         <div className={styles.buttonsWrapper}>
           <button
@@ -59,7 +59,7 @@ const TariffSection: FC = () => {
         </div>
       </div>
 
-      <div className={styles.tariffCards}>
+      <div className={styles.tariffCards} role="list">
         <TariffCard
           count={currentData.plus.count}
           imageSrc={Q_ImageTariff1}
@@ -75,7 +75,7 @@ const TariffSection: FC = () => {
           period={currentData.pro.period}
         />
       </div>
-    </div>
+    </section>
   );
 };
 

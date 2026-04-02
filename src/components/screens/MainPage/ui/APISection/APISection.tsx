@@ -6,7 +6,7 @@ import styles from "./APISection.module.css";
 
 const APISection: FC = () => {
   return (
-    <div className={styles.apiSection}>
+    <section className={styles.apiSection} aria-label="API для разработчиков">
       <div className={styles.headingGroup}>
         <h2>API для разработчиков</h2>
 
@@ -17,22 +17,22 @@ const APISection: FC = () => {
       </div>
 
       <div className={styles.cardApi}>
-        <div className={styles.cardInfo}>
+        <article className={styles.cardInfo}>
           <h3>Лексика и грамматика</h3>
           <p>
             В тексте выявлена только одна незначительная лексическая неточность
             («at last»). Это укладывается в диапазон 0–2 ошибки,
             что соответствует максимальному баллу по этой категории
           </p>
-        </div>
-        <div className={cn(styles.cardInfo, styles.cardInfo2)}>
+        </article>
+        <article className={cn(styles.cardInfo, styles.cardInfo2)}>
           <h3>Общий балл: 2 балла</h3>
           <p>
             Работа демонстрирует высокий уровень владения языком. Текст написан
             грамотно с минимальным количеством неточностей, которые не влияют
             на коммуникацию. Соблюдены требования задания по содержанию и объёму
           </p>
-        </div>
+        </article>
       </div>
 
       <Image
@@ -41,7 +41,7 @@ const APISection: FC = () => {
         draggable={false}
         className={styles.imageAPI}
       />
-    </div>
+    </section>
   );
 };
 

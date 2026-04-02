@@ -66,7 +66,7 @@ const HowItWorksSection: FC = () => {
 						languages, cultures and countries and I hope I&apos;ll work as...
 					</p>
 				</div>
-				<Image src={A_Bulb} alt='Картинка лампочки' draggable={false} />
+				<Image src={A_Bulb} alt='Иллюстрация: получение задания от ученика' draggable={false} />
 			</div>
 		</CardInfo>,
 		<CardInfo
@@ -128,7 +128,7 @@ const HowItWorksSection: FC = () => {
 					<p>Комментарий...</p>
 				</div>
 
-				<Image src={A_ImageGraph} alt='Картинка' draggable={false} />
+				<Image src={A_ImageGraph} alt='График для анализа результатов' draggable={false} />
 			</div>
 		</CardInfo>,
 	]
@@ -138,8 +138,8 @@ const HowItWorksSection: FC = () => {
 	const cardsToRender = width <= 1023 ? mobileOrder.map(i => cards[i]) : cards
 
 	return (
-		<div className={styles.howItWorksSection}>
-			<h2>Как это работает</h2>
+		<section className={styles.howItWorksSection} aria-label="Как это работает">
+			<h2 id="how-it-works-heading">Как это работает</h2>
 
 			{width <= 767 && (
 				<div className={styles.buttonsArrows}>
@@ -190,7 +190,7 @@ const HowItWorksSection: FC = () => {
 				</div>
 			)}
 
-			<div className={styles.cardsWrapper}>
+			<div className={styles.cardsWrapper} role="region" aria-label="Шаги работы с CheckMate" aria-live="polite">
 				<div
 					className={styles.cardsProcess}
 					style={{
@@ -250,7 +250,7 @@ const HowItWorksSection: FC = () => {
 					</div>
 				)}
 			</div>
-		</div>
+		</section>
 	)
 }
 

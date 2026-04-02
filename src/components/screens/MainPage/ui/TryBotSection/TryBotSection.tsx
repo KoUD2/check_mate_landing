@@ -12,7 +12,7 @@ const TryBotSection: FC = () => {
   };
 
   return (
-    <div className={styles.tryBotSection}>
+    <section className={styles.tryBotSection} aria-label="Попробовать CheckMate бесплатно">
       <div className={styles.headingGroup}>
         <h2>Попробовать бесплатно</h2>
 
@@ -29,7 +29,7 @@ const TryBotSection: FC = () => {
         alt="Попробовать бесплатно бота в телеграм"
         draggable={false}
       />
-    </div>
+    </section>
   );
 };
 

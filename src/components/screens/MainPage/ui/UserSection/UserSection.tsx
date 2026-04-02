@@ -7,7 +7,7 @@ import styles from "./UserSection.module.css";
 
 const UserSection: FC = () => {
   return (
-    <div className={styles.userSection}>
+    <section className={styles.userSection} aria-label="Для кого предназначен CheckMate">
       <UserCard
         smallText="Меньше времени на проверку"
         header="Репетиторам"
@@ -26,7 +26,7 @@ const UserSection: FC = () => {
         imageSrc={A_UserImage3}
         key={3}
       />
-    </div>
+    </section>
   );
 };
 

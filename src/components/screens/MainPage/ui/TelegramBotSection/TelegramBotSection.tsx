@@ -11,7 +11,7 @@ const TelegramBotSection: FC = () => {
 	}
 
 	return (
-		<div className={styles.telegramBotSection}>
+		<section className={styles.telegramBotSection} aria-label="Telegram бот CheckMate">
 			<div className={styles.blockWithButton}>
 				<div className={styles.headingGroup}>
 					<h2>Попробуйте проверку в Telegram</h2>
@@ -32,7 +32,7 @@ const TelegramBotSection: FC = () => {
 			</div>
 
 			<div className={styles.cardsWrapper}>
-				<div className={styles.cardInfo}>
+				<article className={styles.cardInfo}>
 					<h3>Обнаруженные ошибки</h3>
 
 					<p>
@@ -40,8 +40,8 @@ const TelegramBotSection: FC = () => {
 						фраза к своим вопросам (“You mentioned your uncle Keith”) вместо
 						требуемой (“By the way...”).
 					</p>
-				</div>
-				<div className={cn(styles.cardInfo, styles.cardInfo2)}>
+				</article>
+				<article className={cn(styles.cardInfo, styles.cardInfo2)}>
 					<div>
 						<h3>Организация текста</h3>
 
@@ -57,8 +57,8 @@ const TelegramBotSection: FC = () => {
 						mentioned your uncle Keith”). Связность текста на хорошем уровне
 						для неформального письма
 					</p>
-				</div>
-				<div className={cn(styles.cardInfo, styles.cardInfo3)}>
+				</article>
+				<article className={cn(styles.cardInfo, styles.cardInfo3)}>
 					<div>
 						<h3>Рекомендации</h3>
 
@@ -70,9 +70,9 @@ const TelegramBotSection: FC = () => {
 						переходные фразы: “Regarding your questions,” перед ответами и ”By
 						the way,” перед вашими вопросами
 					</p>
-				</div>
+				</article>
 			</div>
-		</div>
+		</section>
 	)
 }
 

@@ -49,15 +49,15 @@ const FeedbackSection: FC = () => {
         : -(cardsWidth - sliderWidth) - sideOffset
       : 0;
 
-  console.log(width);
+  
 
   return (
-    <div className={styles.feedbackSection}>
+    <section className={styles.feedbackSection} aria-label="Отзывы пользователей">
       <h2>Что о нас говорят</h2>
 
       {width >= 768 && width <= 1023 ? (
         <>
-          <div className={styles.sliderWrapper}>
+          <div className={styles.sliderWrapper} role="region" aria-label="Карусель отзывов" aria-live="polite">
             <div
               className={styles.cardsReviews}
               style={{
@@ -129,7 +129,7 @@ const FeedbackSection: FC = () => {
           ))}
         </div>
       )}
-    </div>
+    </section>
   );
 };
 

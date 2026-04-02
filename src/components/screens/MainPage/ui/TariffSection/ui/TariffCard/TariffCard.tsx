@@ -18,8 +18,8 @@ const TariffCard: FC<ITariffCard> = ({
   };
 
   return (
-    <div className={styles.tariffCard}>
-      <Image src={imageSrc} alt="Тарифный план" draggable={false} />
+    <article className={styles.tariffCard} role="listitem">
+      <Image src={imageSrc} alt={`Иллюстрация тарифного плана ${subscriptionName}`} draggable={false} />
 
       <h3>Подписка {subscriptionName}</h3>
 
@@ -38,7 +38,7 @@ const TariffCard: FC<ITariffCard> = ({
         size="large"
         onClick={handleTryButtonClick}
       />
-    </div>
+    </article>
   );
 };
 

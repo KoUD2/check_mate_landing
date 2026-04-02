@@ -10,8 +10,8 @@ const FeedbackCard: FC<IFeedbackCard> = ({
   review,
 }) => {
   return (
-    <div className={styles.feedbackCard}>
-      <Image src={ImageSrc} alt="Отзыв" draggable={false} />
+    <article className={styles.feedbackCard}>
+      <Image src={ImageSrc} alt={`Фото ${personName}`} draggable={false} />
 
       <div className={styles.textReview}>
         <div className={styles.headingReview}>
@@ -21,7 +21,7 @@ const FeedbackCard: FC<IFeedbackCard> = ({
 
         <p>{review}</p>
       </div>
-    </div>
+    </article>
   );
 };
 

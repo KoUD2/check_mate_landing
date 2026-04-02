@@ -50,12 +50,12 @@ const Header: FC = () => {
     <header className={styles.header}>
       <Image
         src={logo}
-        alt="Логотип"
+        alt="Логотип CheckMate"
         draggable={false}
         className={styles.logo}
       />
 
-      <div className={styles.linksGroupe}>
+      <nav className={styles.linksGroupe} aria-label="Основная навигация">
         <button className={styles.link} onClick={handleHowItWorksClick}>
           Как это работает
         </button>
@@ -65,7 +65,7 @@ const Header: FC = () => {
         <button className={styles.link} onClick={handleTariffsClick}>
           Тарифы
         </button>
-      </div>
+      </nav>
 
       {width > 1023 && (
         <Button
@@ -125,28 +125,29 @@ const Header: FC = () => {
                     />
                   </svg>
                 </button>
-                <div className={styles.menuList}>
-                  <div className={styles.menuItemActive}>
+                <ul className={styles.menuList} role="menu">
+                  <li className={styles.menuItemActive} role="menuitem">
                     <span className={styles.menuNumberActive}>01</span>
                     <span className={styles.menuTextActive}>
                       Как это работает
                     </span>
-                  </div>
+                  </li>
                   <hr className={styles.menuDivider} />
-                  <div
+                  <li
                     className={styles.menuItem}
+                    role="menuitem"
                     onClick={handleBenefitsClick}
                   >
                     <span className={styles.menuNumber}>02</span>
                     <span className={styles.menuText}>Преимущества</span>
-                  </div>
+                  </li>
                   <hr className={styles.menuDivider} />
-                  <div className={styles.menuItem} onClick={handleTariffsClick}>
+                  <li className={styles.menuItem} role="menuitem" onClick={handleTariffsClick}>
                     <span className={styles.menuNumber}>03</span>
                     <span className={styles.menuText}>Тарифы</span>
-                  </div>
+                  </li>
                   <hr className={styles.menuDivider} />
-                </div>
+                </ul>
               </div>
             </div>
           )}

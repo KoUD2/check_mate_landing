@@ -16,12 +16,12 @@ const BenefitsSection: FC = () => {
 	const { width } = useWindowSize()
 
 	return (
-		<div className={styles.benefitsSection}>
-			<h2>Ускорьте проверку заданий с Checkmate</h2>
+		<section className={styles.benefitsSection} aria-label="Преимущества CheckMate">
+			<h2 id="benefits-heading">Ускорьте проверку заданий с Checkmate</h2>
 
 			<div className={styles.advantagesCards}>
 				<div className={styles.cardsRow}>
-					<div className={styles.card}>
+					<article className={styles.card}>
 						<h3>Больше времени на работу с учениками</h3>
 
 						{width <= 767 && (
@@ -37,9 +37,9 @@ const BenefitsSection: FC = () => {
 						{width > 767 && (
 							<p>Делегируйте рутинную проверку заданий умному помощнику</p>
 						)}
-					</div>
+					</article>
 
-					<div className={styles.card}>
+					<article className={styles.card}>
 						<h3 className={styles.headerWidth}>Проверка по критериям ФИПИ</h3>
 
 						{width <= 767 && (
@@ -49,7 +49,7 @@ const BenefitsSection: FC = () => {
 						)}
 
 						<div className={styles.fullMessage}>
-							<Image src={Subtract} alt='Часть сообщения' />
+							<Image src={Subtract} alt='Пример проверки по критериям ФИПИ' />
 							<div className={styles.message}>
 								<p>Despite I don&apos;t have much time for cooking</p>
 
@@ -78,10 +78,10 @@ const BenefitsSection: FC = () => {
 								Учитываем методические рекомендации
 							</p>
 						)}
-					</div>
+					</article>
 				</div>
 
-				<div className={cn(styles.card, styles.card2)}>
+				<article className={cn(styles.card, styles.card2)}>
 					<h3>Такая же точность, как у эксперта ЕГЭ</h3>
 
 					{width <= 767 && (
@@ -110,9 +110,9 @@ const BenefitsSection: FC = () => {
 						className={styles.handImage}
 						draggable={false}
 					/>
-				</div>
+				</article>
 			</div>
-		</div>
+		</section>
 	)
 }
 

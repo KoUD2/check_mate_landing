@@ -25,19 +25,19 @@ const MainPage: FC = () => {
 	}
 
 	return (
-		<div>
+		<main>
 			<div className={styles.backgraoundHeader}>
 				<Header />
 
-				<div className={styles.blockWithButton}>
+				<section className={styles.blockWithButton} aria-label="Главный экран">
 					<div className={styles.firstScreenText}>
 						<h1>Проверьте письменную часть ЕГЭ по английскому за 2 минуты</h1>
 
-						<div className={styles.lines}>
-							<p>Получите такую же точность, как у эксперта</p>
-							<p>Проверяйте задания 37 и 38 с помощью ИИ</p>
-							<p>Экономьте 3+ часа в день на проверку</p>
-						</div>
+						<ul className={styles.lines} aria-label="Ключевые преимущества">
+							<li>Получите такую же точность, как у эксперта</li>
+							<li>Проверяйте задания 37 и 38 с помощью ИИ</li>
+							<li>Экономьте 3+ часа в день на проверку</li>
+						</ul>
 					</div>
 
 					{width > 767 && (
@@ -48,11 +48,11 @@ const MainPage: FC = () => {
 							onClick={handleTryButtonClick}
 						/>
 					)}
-				</div>
+				</section>
 
 				<Image
 					src={A_FirstIllustration}
-					alt='Иллюстрация к первому слайду'
+					alt='Интерфейс платформы CheckMate — проверка заданий ЕГЭ по английскому'
 					className={styles.illustration}
 					draggable={false}
 					priority
@@ -71,28 +71,28 @@ const MainPage: FC = () => {
 
 			<UserSection />
 
-			<div id='how-it-works'>
+			<section id='how-it-works' aria-labelledby='how-it-works-heading'>
 				<HowItWorksSection />
-			</div>
+			</section>
 
 			<TelegramBotSection />
 
-			<div id='benefits'>
+			<section id='benefits' aria-labelledby='benefits-heading'>
 				<BenefitsSection />
-			</div>
+			</section>
 
 			<FeedbackSection />
 
 			<APISection />
 
-			<div id='tariffs'>
+			<section id='tariffs' aria-labelledby='tariffs-heading'>
 				<TariffSection />
-			</div>
+			</section>
 
 			<TryBotSection />
 
 			<Footer />
-		</div>
+		</main>
 	)
 }
 
