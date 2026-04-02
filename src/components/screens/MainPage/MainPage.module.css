@@ -43,6 +43,11 @@
 
 	> p,
 	> li {
+		font-family: 'Gilroy Medium';
+		font-size: 1.146vw;
+		font-style: normal;
+		font-weight: 500;
+		line-height: 120%;
 		color: var(--snow_white, #fff);
 		text-align: center;
 	}

@@ -18,18 +18,42 @@ const TariffCard: FC<ITariffCard> = ({
   };
 
   return (
-    <article className={styles.tariffCard} role="listitem">
-      <Image src={imageSrc} alt={`Иллюстрация тарифного плана ${subscriptionName}`} draggable={false} />
+    <article
+      className={styles.tariffCard}
+      role="listitem"
+      itemScope
+      itemType="https://schema.org/Product"
+    >
+      <meta itemProp="brand" content="CheckMate" />
+      <meta itemProp="category" content="Образовательное программное обеспечение" />
 
-      <h3>Подписка {subscriptionName}</h3>
+      <Image
+        src={imageSrc}
+        alt={`Иллюстрация тарифного плана ${subscriptionName}`}
+        draggable={false}
+      />
 
-      <div className={styles.price}>
+      <h3 itemProp="name">Подписка {subscriptionName}</h3>
+
+      <div
+        className={styles.price}
+        itemProp="offers"
+        itemScope
+        itemType="https://schema.org/Offer"
+      >
+        <link itemProp="availability" href="https://schema.org/InStock" />
+        <link itemProp="url" href="https://t.me/checkmate_ai_bot" />
+        <meta itemProp="priceCurrency" content="RUB" />
+        <meta itemProp="priceValidUntil" content="2026-12-31" />
+
         <div className={styles.priceInner}>
-          <div className={styles.priceAmount}>{price} ₽</div>
+          <div className={styles.priceAmount} itemProp="price" content={String(price)}>
+            {price} ₽
+          </div>
           <p>/{period}</p>
         </div>
 
-        <p>{count} проверок</p>
+        <p itemProp="description">{count} проверок</p>
       </div>
 
       <Button
@@ -37,6 +61,7 @@ const TariffCard: FC<ITariffCard> = ({
         text="Купить"
         size="large"
         onClick={handleTryButtonClick}
+        aria-label={`Купить подписку CheckMate ${subscriptionName} за ${price} ₽ в ${period}`}
       />
     </article>
   );
