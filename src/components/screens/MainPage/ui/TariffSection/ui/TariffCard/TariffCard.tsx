@@ -26,6 +26,10 @@ const TariffCard: FC<ITariffCard> = ({
     >
       <meta itemProp="brand" content="CheckMate" />
       <meta itemProp="category" content="Образовательное программное обеспечение" />
+      <meta
+        itemProp="description"
+        content={`${count} проверок заданий ЕГЭ по английскому языку в ${period}. Автоматическая проверка по официальным критериям ФИПИ, детальная обратная связь для ученика.`}
+      />
 
       <Image
         src={imageSrc}

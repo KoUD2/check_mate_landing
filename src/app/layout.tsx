@@ -96,7 +96,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ru">
+    <html lang="ru" prefix="og: https://ogp.me/ns# product: https://ogp.me/ns/product#">
       <head>
         {/* Дополнительные мета-теги */}
         <meta name="theme-color" content="#ff561f" />
@@ -136,22 +136,25 @@ export default function RootLayout({
                 name: "CheckMate Team",
               },
               offers: {
-                "@type": "Offer",
-                category: "subscription",
-                priceSpecification: [
+                "@type": "AggregateOffer",
+                lowPrice: "549",
+                highPrice: "990",
+                priceCurrency: "RUB",
+                offerCount: "4",
+                offers: [
                   {
-                    "@type": "PriceSpecification",
-                    name: "Plus",
+                    "@type": "Offer",
+                    name: "CheckMate Plus — месяц",
                     price: "549",
                     priceCurrency: "RUB",
-                    billingDuration: "P1M",
+                    availability: "https://schema.org/InStock",
                   },
                   {
-                    "@type": "PriceSpecification",
-                    name: "Pro",
+                    "@type": "Offer",
+                    name: "CheckMate Pro — месяц",
                     price: "990",
                     priceCurrency: "RUB",
-                    billingDuration: "P1M",
+                    availability: "https://schema.org/InStock",
                   },
                 ],
               },
@@ -162,10 +165,6 @@ export default function RootLayout({
                 "Экономия до 80% времени учителя",
                 "Поддержка различных типов заданий",
               ],
-              targetAudience: {
-                "@type": "Audience",
-                audienceType: "Teachers, Educational Institutions",
-              },
             }),
           }}
         />
