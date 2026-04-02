@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     title: "CheckMate - ИИ платформа для автоматической проверки заданий",
     description:
       "Революционная ИИ платформа для автоматической проверки школьных заданий по критериям ФИПИ. Экономьте время, получайте объективные оценки.",
-    url: "https://checkmate.ai",
+    url: "https://checkmate-ai.ru",
     siteName: "CheckMate",
     images: [
       {
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     images: ["/twitter-image-home.jpg"],
   },
   alternates: {
-    canonical: "https://checkmate.ai",
+    canonical: "https://checkmate-ai.ru",
   },
 };
 
@@ -50,7 +50,7 @@ export default function Home() {
             name: "CheckMate - ИИ платформа для проверки заданий",
             description:
               "Автоматическая проверка школьных заданий по критериям ФИПИ с помощью искусственного интеллекта",
-            url: "https://checkmate.ai",
+            url: "https://checkmate-ai.ru",
             mainEntity: {
               "@type": "SoftwareApplication",
               name: "CheckMate",
@@ -77,7 +77,7 @@ export default function Home() {
                   "@type": "ListItem",
                   position: 1,
                   name: "Главная",
-                  item: "https://checkmate.ai",
+                  item: "https://checkmate-ai.ru",
                 },
               ],
             },

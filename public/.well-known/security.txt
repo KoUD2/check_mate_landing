@@ -1,14 +1,4 @@
-# Security.txt для CheckMate
-Contact: mailto:security@checkmate.ai
-Contact: https://checkmate.ai/security
-Expires: 2025-12-31T23:59:59.000Z
-Encryption: https://checkmate.ai/pgp-key.txt
-Acknowledgments: https://checkmate.ai/security/hall-of-fame
-Policy: https://checkmate.ai/security/policy
-Hiring: https://checkmate.ai/careers
-
-# Preferred Languages
+Contact: mailto:support@checkmate-ai.ru
+Expires: 2027-01-01T00:00:00.000Z
 Preferred-Languages: ru, en
-
-# Canonical
-Canonical: https://checkmate.ai/.well-known/security.txt 
+Canonical: https://checkmate-ai.ru/.well-known/security.txt

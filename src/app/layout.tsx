@@ -48,7 +48,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "ru_RU",
-    url: "https://checkmate.ai",
+    url: "https://checkmate-ai.ru",
     siteName: "CheckMate",
     title: "CheckMate - ИИ платформа для автоматической проверки заданий",
     description:
@@ -72,13 +72,12 @@ export const metadata: Metadata = {
     site: "@checkmate_ai",
   },
   verification: {
-    google: "your-google-verification-code",
     yandex: "c435d1462a7f89ce",
   },
   alternates: {
-    canonical: "https://checkmate.ai",
+    canonical: "https://checkmate-ai.ru",
     languages: {
-      "ru-RU": "https://checkmate.ai",
+      "ru-RU": "https://checkmate-ai.ru",
     },
   },
   category: "education",
@@ -123,7 +122,7 @@ export default function RootLayout({
                 "ИИ платформа для автоматической проверки школьных заданий по критериям ФИПИ",
               applicationCategory: "EducationalApplication",
               operatingSystem: "Web",
-              url: "https://checkmate.ai",
+              url: "https://checkmate-ai.ru",
               author: {
                 "@type": "Organization",
                 name: "CheckMate Team",
