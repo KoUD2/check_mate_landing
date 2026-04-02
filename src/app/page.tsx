@@ -122,7 +122,7 @@ export default function Home() {
         }}
       />
 
-      {/* Pricing Schema для отображения цен в поиске */}
+      {/* Pricing Schema с billingDuration для подписок */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -130,7 +130,7 @@ export default function Home() {
             "@context": "https://schema.org",
             "@type": "ItemList",
             "name": "Тарифные планы CheckMate",
-            "description": "Тарифы ИИ платформы CheckMate для автоматической проверки заданий ЕГЭ",
+            "description": "Подписки ИИ платформы CheckMate для автоматической проверки заданий ЕГЭ по английскому",
             "url": "https://checkmate-ai.ru/#tariffs",
             "numberOfItems": 4,
             "itemListElement": [
@@ -140,19 +140,28 @@ export default function Home() {
                 "item": {
                   "@type": "Product",
                   "name": "CheckMate Plus — месяц",
-                  "description": "50 проверок заданий ЕГЭ по английскому в месяц. Автоматическая проверка по критериям ФИПИ.",
+                  "description": "50 проверок заданий ЕГЭ по английскому в месяц. Автоматическая проверка по официальным критериям ФИПИ.",
                   "brand": { "@type": "Brand", "name": "CheckMate" },
                   "category": "Образовательное программное обеспечение",
                   "url": "https://checkmate-ai.ru/#tariffs",
                   "offers": {
                     "@type": "Offer",
                     "name": "CheckMate Plus на месяц",
-                    "price": "549",
                     "priceCurrency": "RUB",
                     "priceValidUntil": "2026-12-31",
                     "availability": "https://schema.org/InStock",
                     "url": "https://t.me/checkmate_ai_bot",
-                    "seller": { "@type": "Organization", "name": "CheckMate" }
+                    "seller": { "@type": "Organization", "name": "CheckMate" },
+                    "priceSpecification": {
+                      "@type": "UnitPriceSpecification",
+                      "price": "549",
+                      "priceCurrency": "RUB",
+                      "billingDuration": {
+                        "@type": "QuantitativeValue",
+                        "value": 1,
+                        "unitCode": "MON"
+                      }
+                    }
                   }
                 }
               },
@@ -162,19 +171,28 @@ export default function Home() {
                 "item": {
                   "@type": "Product",
                   "name": "CheckMate Pro — месяц",
-                  "description": "200 проверок заданий ЕГЭ по английскому в месяц. Автоматическая проверка по критериям ФИПИ.",
+                  "description": "200 проверок заданий ЕГЭ по английскому в месяц. Автоматическая проверка по официальным критериям ФИПИ.",
                   "brand": { "@type": "Brand", "name": "CheckMate" },
                   "category": "Образовательное программное обеспечение",
                   "url": "https://checkmate-ai.ru/#tariffs",
                   "offers": {
                     "@type": "Offer",
                     "name": "CheckMate Pro на месяц",
-                    "price": "990",
                     "priceCurrency": "RUB",
                     "priceValidUntil": "2026-12-31",
                     "availability": "https://schema.org/InStock",
                     "url": "https://t.me/checkmate_ai_bot",
-                    "seller": { "@type": "Organization", "name": "CheckMate" }
+                    "seller": { "@type": "Organization", "name": "CheckMate" },
+                    "priceSpecification": {
+                      "@type": "UnitPriceSpecification",
+                      "price": "990",
+                      "priceCurrency": "RUB",
+                      "billingDuration": {
+                        "@type": "QuantitativeValue",
+                        "value": 1,
+                        "unitCode": "MON"
+                      }
+                    }
                   }
                 }
               },
@@ -184,19 +202,28 @@ export default function Home() {
                 "item": {
                   "@type": "Product",
                   "name": "CheckMate Plus — год",
-                  "description": "600 проверок заданий ЕГЭ по английскому в год. Автоматическая проверка по критериям ФИПИ.",
+                  "description": "600 проверок заданий ЕГЭ по английскому в год. Экономия 20% по сравнению с месячной подпиской.",
                   "brand": { "@type": "Brand", "name": "CheckMate" },
                   "category": "Образовательное программное обеспечение",
                   "url": "https://checkmate-ai.ru/#tariffs",
                   "offers": {
                     "@type": "Offer",
                     "name": "CheckMate Plus на год",
-                    "price": "5490",
                     "priceCurrency": "RUB",
                     "priceValidUntil": "2026-12-31",
                     "availability": "https://schema.org/InStock",
                     "url": "https://t.me/checkmate_ai_bot",
-                    "seller": { "@type": "Organization", "name": "CheckMate" }
+                    "seller": { "@type": "Organization", "name": "CheckMate" },
+                    "priceSpecification": {
+                      "@type": "UnitPriceSpecification",
+                      "price": "5490",
+                      "priceCurrency": "RUB",
+                      "billingDuration": {
+                        "@type": "QuantitativeValue",
+                        "value": 1,
+                        "unitCode": "ANN"
+                      }
+                    }
                   }
                 }
               },
@@ -206,19 +233,28 @@ export default function Home() {
                 "item": {
                   "@type": "Product",
                   "name": "CheckMate Pro — год",
-                  "description": "2400 проверок заданий ЕГЭ по английскому в год. Автоматическая проверка по критериям ФИПИ.",
+                  "description": "2400 проверок заданий ЕГЭ по английскому в год. Экономия 25% по сравнению с месячной подпиской.",
                   "brand": { "@type": "Brand", "name": "CheckMate" },
                   "category": "Образовательное программное обеспечение",
                   "url": "https://checkmate-ai.ru/#tariffs",
                   "offers": {
                     "@type": "Offer",
                     "name": "CheckMate Pro на год",
-                    "price": "8900",
                     "priceCurrency": "RUB",
                     "priceValidUntil": "2026-12-31",
                     "availability": "https://schema.org/InStock",
                     "url": "https://t.me/checkmate_ai_bot",
-                    "seller": { "@type": "Organization", "name": "CheckMate" }
+                    "seller": { "@type": "Organization", "name": "CheckMate" },
+                    "priceSpecification": {
+                      "@type": "UnitPriceSpecification",
+                      "price": "8900",
+                      "priceCurrency": "RUB",
+                      "billingDuration": {
+                        "@type": "QuantitativeValue",
+                        "value": 1,
+                        "unitCode": "ANN"
+                      }
+                    }
                   }
                 }
               }
@@ -227,7 +263,7 @@ export default function Home() {
         }}
       />
 
-      <MainPage />
+            <MainPage />
     </>
   );
 }

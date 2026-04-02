@@ -106,6 +106,14 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-title" content="CheckMate" />
         <meta name="application-name" content="CheckMate" />
 
+
+        {/* Open Graph цена для шаринга */}
+        <meta property="product:price:amount" content="549" />
+        <meta property="product:price:currency" content="RUB" />
+        <meta property="product:availability" content="in stock" />
+        <meta property="product:condition" content="new" />
+        <meta property="product:retailer_item_id" content="checkmate-plus-month" />
+
         {/* Cookie и Privacy настройки */}
         <meta httpEquiv="Set-Cookie" content="SameSite=Strict; Secure" />
         <meta name="referrer" content="strict-origin-when-cross-origin" />
