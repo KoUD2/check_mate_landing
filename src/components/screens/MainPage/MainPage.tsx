@@ -33,10 +33,10 @@ const MainPage: FC = () => {
 					<div className={styles.firstScreenText}>
 						<h1>Проверьте письменную часть ЕГЭ по английскому за 2 минуты</h1>
 
-						<ul className={styles.lines} aria-label="Ключевые преимущества">
-							<li>Получите такую же точность, как у эксперта</li>
-							<li>Проверяйте задания 37 и 38 с помощью ИИ</li>
-							<li>Экономьте 3+ часа в день на проверку</li>
+						<ul className={styles.lines} aria-label="Ключевые преимущества" role="list">
+							<li role="listitem">Получите такую же точность, как у эксперта</li>
+							<li role="listitem">Проверяйте задания 37 и 38 с помощью ИИ</li>
+							<li role="listitem">Экономьте 3+ часа в день на проверку</li>
 						</ul>
 					</div>
 
