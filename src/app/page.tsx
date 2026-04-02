@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     title: "CheckMate - ИИ платформа для автоматической проверки заданий",
     description:
       "Революционная ИИ платформа для автоматической проверки школьных заданий по критериям ФИПИ. Экономьте время, получайте объективные оценки.",
-    url: "https://checkmate-ai.ru",
+    url: "https://checkmateai.ru",
     siteName: "CheckMate",
     images: [
       {
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     images: ["/twitter-image-home.jpg"],
   },
   alternates: {
-    canonical: "https://checkmate-ai.ru",
+    canonical: "https://checkmateai.ru",
   },
 };
 
@@ -50,7 +50,7 @@ export default function Home() {
             name: "CheckMate - ИИ платформа для проверки заданий",
             description:
               "Автоматическая проверка школьных заданий по критериям ФИПИ с помощью искусственного интеллекта",
-            url: "https://checkmate-ai.ru",
+            url: "https://checkmateai.ru",
             mainEntity: {
               "@type": "SoftwareApplication",
               name: "CheckMate",
@@ -77,7 +77,7 @@ export default function Home() {
                   "@type": "ListItem",
                   position: 1,
                   name: "Главная",
-                  item: "https://checkmate-ai.ru",
+                  item: "https://checkmateai.ru",
                 },
               ],
             },
@@ -131,7 +131,7 @@ export default function Home() {
             "@type": "ItemList",
             "name": "Тарифные планы CheckMate",
             "description": "Подписки ИИ платформы CheckMate для автоматической проверки заданий ЕГЭ по английскому",
-            "url": "https://checkmate-ai.ru/#tariffs",
+            "url": "https://checkmateai.ru/#tariffs",
             "numberOfItems": 4,
             "itemListElement": [
               {
@@ -143,7 +143,7 @@ export default function Home() {
                   "description": "50 проверок заданий ЕГЭ по английскому в месяц. Автоматическая проверка по официальным критериям ФИПИ.",
                   "brand": { "@type": "Brand", "name": "CheckMate" },
                   "category": "Образовательное программное обеспечение",
-                  "url": "https://checkmate-ai.ru/#tariffs",
+                  "url": "https://checkmateai.ru/#tariffs",
                   "offers": {
                     "@type": "Offer",
                     "name": "CheckMate Plus на месяц",
@@ -174,7 +174,7 @@ export default function Home() {
                   "description": "200 проверок заданий ЕГЭ по английскому в месяц. Автоматическая проверка по официальным критериям ФИПИ.",
                   "brand": { "@type": "Brand", "name": "CheckMate" },
                   "category": "Образовательное программное обеспечение",
-                  "url": "https://checkmate-ai.ru/#tariffs",
+                  "url": "https://checkmateai.ru/#tariffs",
                   "offers": {
                     "@type": "Offer",
                     "name": "CheckMate Pro на месяц",
@@ -205,7 +205,7 @@ export default function Home() {
                   "description": "600 проверок заданий ЕГЭ по английскому в год. Экономия 20% по сравнению с месячной подпиской.",
                   "brand": { "@type": "Brand", "name": "CheckMate" },
                   "category": "Образовательное программное обеспечение",
-                  "url": "https://checkmate-ai.ru/#tariffs",
+                  "url": "https://checkmateai.ru/#tariffs",
                   "offers": {
                     "@type": "Offer",
                     "name": "CheckMate Plus на год",
@@ -236,7 +236,7 @@ export default function Home() {
                   "description": "2400 проверок заданий ЕГЭ по английскому в год. Экономия 25% по сравнению с месячной подпиской.",
                   "brand": { "@type": "Brand", "name": "CheckMate" },
                   "category": "Образовательное программное обеспечение",
-                  "url": "https://checkmate-ai.ru/#tariffs",
+                  "url": "https://checkmateai.ru/#tariffs",
                   "offers": {
                     "@type": "Offer",
                     "name": "CheckMate Pro на год",

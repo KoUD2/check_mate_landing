@@ -1,6 +1,6 @@
 import { MetadataRoute } from "next";
 
-const BASE_URL = "https://checkmate-ai.ru";
+const BASE_URL = "https://checkmateai.ru";
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -26,6 +26,6 @@ export default function robots(): MetadataRoute.Robots {
         crawlDelay: 2,
       },
     ],
-    sitemap: [`${BASE_URL}/sitemap.xml`, `${BASE_URL}/feed.xml`],
+    sitemap: `${BASE_URL}/sitemap.xml`,
   };
 }

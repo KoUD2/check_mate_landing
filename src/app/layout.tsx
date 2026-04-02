@@ -5,7 +5,7 @@ import { CheckMateCriticalPreloader } from "@/components/Performance/ResourcePre
 import "../assets/styles/globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://checkmate-ai.ru"),
+  metadataBase: new URL("https://checkmateai.ru"),
   title: {
     default:
       "CheckMate - ИИ платформа для автоматической проверки заданий по критериям ФИПИ",
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "ru_RU",
-    url: "https://checkmate-ai.ru",
+    url: "https://checkmateai.ru",
     siteName: "CheckMate",
     title: "CheckMate - ИИ платформа для автоматической проверки заданий",
     description:
@@ -75,9 +75,9 @@ export const metadata: Metadata = {
     yandex: "c435d1462a7f89ce",
   },
   alternates: {
-    canonical: "https://checkmate-ai.ru",
+    canonical: "https://checkmateai.ru",
     languages: {
-      "ru-RU": "https://checkmate-ai.ru",
+      "ru-RU": "https://checkmateai.ru",
     },
   },
   category: "education",
@@ -130,7 +130,7 @@ export default function RootLayout({
                 "ИИ платформа для автоматической проверки школьных заданий по критериям ФИПИ",
               applicationCategory: "EducationalApplication",
               operatingSystem: "Web",
-              url: "https://checkmate-ai.ru",
+              url: "https://checkmateai.ru",
               author: {
                 "@type": "Organization",
                 name: "CheckMate Team",

@@ -1,6 +1,6 @@
 import { MetadataRoute } from "next";
 
-const BASE_URL = "https://checkmate-ai.ru";
+const BASE_URL = "https://checkmateai.ru";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
