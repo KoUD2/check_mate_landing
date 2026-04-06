@@ -14,7 +14,7 @@ const TariffCard: FC<ITariffCard> = ({
   period,
 }) => {
   const handleTryButtonClick = () => {
-    window.open("https://t.me/checkmate_ai_bot", "_blank");
+    window.open("https://app.checkmateai.ru/", "_blank");
   };
 
   return (
@@ -46,7 +46,7 @@ const TariffCard: FC<ITariffCard> = ({
         itemType="https://schema.org/Offer"
       >
         <link itemProp="availability" href="https://schema.org/InStock" />
-        <link itemProp="url" href="https://t.me/checkmate_ai_bot" />
+        <link itemProp="url" href="https://app.checkmateai.ru/" />
         <meta itemProp="priceCurrency" content="RUB" />
         <meta itemProp="priceValidUntil" content="2026-12-31" />
 

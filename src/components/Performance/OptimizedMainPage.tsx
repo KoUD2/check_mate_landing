@@ -66,7 +66,7 @@ const OptimizedMainPage: FC = () => {
   const { width } = useOptimizedWindowSize({ debounceMs: 150 });
 
   const handleTryButtonClick = () => {
-    window.open("https://t.me/checkmate_ai_bot", "_blank");
+    window.open("https://app.checkmateai.ru/", "_blank");
   };
 
   return (

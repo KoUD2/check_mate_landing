@@ -151,7 +151,7 @@ export default function Home() {
                     "priceCurrency": "RUB",
                     "priceValidUntil": "2026-12-31",
                     "availability": "https://schema.org/InStock",
-                    "url": "https://t.me/checkmate_ai_bot",
+                    "url": "https://app.checkmateai.ru/",
                     "seller": { "@type": "Organization", "name": "CheckMate" }
                   }
                 }
@@ -173,7 +173,7 @@ export default function Home() {
                     "priceCurrency": "RUB",
                     "priceValidUntil": "2026-12-31",
                     "availability": "https://schema.org/InStock",
-                    "url": "https://t.me/checkmate_ai_bot",
+                    "url": "https://app.checkmateai.ru/",
                     "seller": { "@type": "Organization", "name": "CheckMate" }
                   }
                 }
@@ -195,7 +195,7 @@ export default function Home() {
                     "priceCurrency": "RUB",
                     "priceValidUntil": "2026-12-31",
                     "availability": "https://schema.org/InStock",
-                    "url": "https://t.me/checkmate_ai_bot",
+                    "url": "https://app.checkmateai.ru/",
                     "seller": { "@type": "Organization", "name": "CheckMate" }
                   }
                 }
@@ -217,7 +217,7 @@ export default function Home() {
                     "priceCurrency": "RUB",
                     "priceValidUntil": "2026-12-31",
                     "availability": "https://schema.org/InStock",
-                    "url": "https://t.me/checkmate_ai_bot",
+                    "url": "https://app.checkmateai.ru/",
                     "seller": { "@type": "Organization", "name": "CheckMate" }
                   }
                 }

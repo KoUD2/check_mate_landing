@@ -21,7 +21,7 @@ const MainPage: FC = () => {
 	const { width } = useWindowSize()
 
 	const handleTryButtonClick = () => {
-		window.open('https://t.me/checkmate_ai_bot', '_blank')
+		window.open('https://app.checkmateai.ru/', '_blank')
 	}
 
 	return (
