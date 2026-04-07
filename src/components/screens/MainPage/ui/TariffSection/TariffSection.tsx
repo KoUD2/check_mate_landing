@@ -22,11 +22,11 @@ const TariffSection: FC = () => {
   const tariffData = {
     month: {
       plus: { count: 50, price: 549, period: "месяц" as const },
-      pro: { count: 200, price: 990, period: "месяц" as const },
+      pro: { count: 200, price: 2099, period: "месяц" as const },
     },
     year: {
-      plus: { count: 600, price: 5490, period: "год" as const },
-      pro: { count: 2400, price: 8900, period: "год" as const },
+      plus: { count: 600, price: 6499, period: "год" as const },
+      pro: { count: 2400, price: 25999, period: "год" as const },
     },
   };
 
