@@ -80,6 +80,13 @@ export const metadata: Metadata = {
       "ru-RU": "https://checkmateai.ru",
     },
   },
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon.svg", type: "image/svg+xml" },
+    ],
+    apple: "/apple-icon.png",
+  },
   category: "education",
   classification: "Educational Technology Platform",
   referrer: "origin-when-cross-origin",
@@ -169,10 +176,6 @@ export default function RootLayout({
           }}
         />
 
-        {/* Favicon and Apple Touch Icons */}
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/manifest.json" />
       </head>
       <body>
