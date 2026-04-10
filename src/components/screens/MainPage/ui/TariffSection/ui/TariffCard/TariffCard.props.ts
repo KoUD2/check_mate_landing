@@ -6,5 +6,4 @@ export interface ITariffCard
   subscriptionName: string;
   count: number;
   price: number;
-  period: "месяц" | "год";
 }

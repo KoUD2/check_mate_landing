@@ -11,7 +11,6 @@ const TariffCard: FC<ITariffCard> = ({
   subscriptionName,
   count,
   price,
-  period,
 }) => {
   const handleTryButtonClick = () => {
     window.open("https://app.checkmateai.ru/", "_blank");
@@ -28,7 +27,7 @@ const TariffCard: FC<ITariffCard> = ({
       <meta itemProp="category" content="Образовательное программное обеспечение" />
       <meta
         itemProp="description"
-        content={`${count} проверок заданий ЕГЭ по английскому языку в ${period}. Автоматическая проверка по официальным критериям ФИПИ, детальная обратная связь для ученика.`}
+        content={`${count} проверок заданий ЕГЭ по английскому языку. Автоматическая проверка по официальным критериям ФИПИ, детальная обратная связь для ученика.`}
       />
 
       <Image
@@ -37,7 +36,7 @@ const TariffCard: FC<ITariffCard> = ({
         draggable={false}
       />
 
-      <h3 itemProp="name">Подписка {subscriptionName}</h3>
+      <h3 itemProp="name">{subscriptionName}</h3>
 
       <div
         className={styles.price}
@@ -54,7 +53,6 @@ const TariffCard: FC<ITariffCard> = ({
           <div className={styles.priceAmount} itemProp="price" content={String(price)}>
             {price} ₽
           </div>
-          <p>/{period}</p>
         </div>
 
         <p itemProp="description">{count} проверок</p>
@@ -65,7 +63,7 @@ const TariffCard: FC<ITariffCard> = ({
         text="Купить"
         size="large"
         onClick={handleTryButtonClick}
-        aria-label={`Купить подписку CheckMate ${subscriptionName} за ${price} ₽ в ${period}`}
+        aria-label={`Купить пакет CheckMate ${subscriptionName} за ${price} ₽`}
       />
     </article>
   );

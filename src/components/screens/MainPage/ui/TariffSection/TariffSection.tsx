@@ -2,78 +2,35 @@
 
 import Q_ImageTariff1 from "@/shared/images/Q_ImageTariff1.svg";
 import Q_ImageTariff2 from "@/shared/images/Q_ImageTariff2.svg";
-import cn from "classnames";
-import { FC, useState } from "react";
+import { FC } from "react";
 import styles from "./TariffSection.module.css";
 import TariffCard from "./ui/TariffCard/TariffCard";
 
+const PLANS = [
+  { name: "Lite",  price: 149,   checks: 10,   image: Q_ImageTariff1 },
+  { name: "Plus",  price: 549,   checks: 50,   image: Q_ImageTariff1 },
+  { name: "Pro",   price: 1449,  checks: 200,  image: Q_ImageTariff2 },
+  { name: "Ultra", price: 3990,  checks: 600,  image: Q_ImageTariff1 },
+  { name: "Mega",  price: 14490, checks: 2400, image: Q_ImageTariff1 },
+];
+
 const TariffSection: FC = () => {
-  const [activePeriod, setActivePeriod] = useState<"month" | "year">("month");
-
-  const handleMonthClick = () => {
-    setActivePeriod("month");
-  };
-
-  const handleYearClick = () => {
-    setActivePeriod("year");
-  };
-
-  // Данные для тарифов в зависимости от периода
-  const tariffData = {
-    month: {
-      plus: { count: 50, price: 549, period: "месяц" as const },
-      pro: { count: 200, price: 2099, period: "месяц" as const },
-    },
-    year: {
-      plus: { count: 600, price: 6499, period: "год" as const },
-      pro: { count: 2400, price: 25999, period: "год" as const },
-    },
-  };
-
-  const currentData = tariffData[activePeriod];
-
   return (
     <section className={styles.tariffSection} aria-label="Тарифные планы">
       <div className={styles.headSection}>
         <h2 id="tariffs-heading">Тарифы</h2>
-
-        <div className={styles.buttonsWrapper}>
-          <button
-            className={cn(
-              styles.buttonPeriod,
-              activePeriod === "month" && styles.buttonPeriodActive
-            )}
-            onClick={handleMonthClick}
-          >
-            На месяц
-          </button>
-          <button
-            className={cn(
-              styles.buttonPeriod,
-              activePeriod === "year" && styles.buttonPeriodActive
-            )}
-            onClick={handleYearClick}
-          >
-            На год
-          </button>
-        </div>
       </div>
 
       <div className={styles.tariffCards} role="list">
-        <TariffCard
-          count={currentData.plus.count}
-          imageSrc={Q_ImageTariff1}
-          price={currentData.plus.price}
-          subscriptionName="Plus"
-          period={currentData.plus.period}
-        />
-        <TariffCard
-          count={currentData.pro.count}
-          imageSrc={Q_ImageTariff2}
-          price={currentData.pro.price}
-          subscriptionName="Pro"
-          period={currentData.pro.period}
-        />
+        {PLANS.map((plan) => (
+          <TariffCard
+            key={plan.name}
+            count={plan.checks}
+            imageSrc={plan.image}
+            price={plan.price}
+            subscriptionName={plan.name}
+          />
+        ))}
       </div>
     </section>
   );
