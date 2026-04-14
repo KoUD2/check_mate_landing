@@ -11,10 +11,10 @@ const TelegramBotSection: FC = () => {
 	}
 
 	return (
-		<section className={styles.telegramBotSection} aria-label="Telegram бот CheckMate">
+		<section className={styles.telegramBotSection} aria-label="CheckMate">
 			<div className={styles.blockWithButton}>
 				<div className={styles.headingGroup}>
-					<h2>Попробуйте проверку в Telegram</h2>
+					<h2>Попробуйте проверку на сайте</h2>
 
 					<div className={styles.lines}>
 						<p>Проверка по актуальным критериям ФИПИ</p>
@@ -25,7 +25,7 @@ const TelegramBotSection: FC = () => {
 				<Button
 					color='orange'
 					size='small'
-					text='Перейти в бота'
+					text='Перейти на сайт'
 					onClick={handleTryButtonClick}
 					className={styles.buttonExp}
 				/>
