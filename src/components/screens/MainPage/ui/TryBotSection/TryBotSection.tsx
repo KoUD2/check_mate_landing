@@ -17,7 +17,7 @@ const TryBotSection: FC = () => {
         <h2>Попробовать бесплатно</h2>
 
         <Button
-          text="Перейти в бота"
+          text="Перейти на сайт"
           color="orange"
           size="small"
           onClick={handleTryButtonClick}
@@ -26,7 +26,7 @@ const TryBotSection: FC = () => {
 
       <Image
         src={A_Hat}
-        alt="Попробовать бесплатно бота в телеграм"
+        alt="Попробовать CheckMate бесплатно"
         draggable={false}
       />
     </section>
