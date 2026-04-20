@@ -5,31 +5,28 @@ import A_Bulb from '@/shared/images/A_Bulb.svg'
 import A_ImageGraph from '@/shared/images/A_ImageGraph.svg'
 import A_TaskImage from '@/shared/images/A_TaskImage.svg'
 import Image from 'next/image'
-import { FC, useState } from 'react'
+import { FC, useEffect, useRef, useState } from 'react'
 import CardInfo from './CardInfo/CardInfo'
 import styles from './HowItWorksSection.module.css'
 
 const HowItWorksSection: FC = () => {
 	const { width } = useWindowSize()
-
+	const sliderRef = useRef<HTMLDivElement>(null)
 	const [currentCard, setCurrentCard] = useState(0)
+	const [isMobile, setIsMobile] = useState(false)
 
-	const handlePrevClick = () => {
-		// Левая кнопка всегда возвращает к началу (первой карточке)
-		setCurrentCard(0)
-	}
+	// Определяем мобилку через matchMedia — не зависит от дефолтного width: 1280
+	useEffect(() => {
+		const mq = window.matchMedia('(max-width: 1023px)')
+		const onChange = (e: MediaQueryList | MediaQueryListEvent) => {
+			setIsMobile(e.matches)
+			setCurrentCard(0)
+		}
+		onChange(mq)
+		mq.addEventListener('change', onChange)
+		return () => mq.removeEventListener('change', onChange)
+	}, [])
 
-	const handleNextClick = () => {
-		// Правая кнопка максимум один клик вправо (от первой ко второй карточке)
-		setCurrentCard(prev => (prev === 0 ? 1 : 1))
-	}
-
-	// Вычисляем смещение в пикселях (ширина одной карточки + gap)
-	const cardWidth = 22.865 // ширина карточки в vw
-	const gap = 1.042 // gap в vw
-	const translateX = -(currentCard * (cardWidth + gap))
-
-	// Массив карточек в стандартном порядке
 	const cards = [
 		<CardInfo
 			key={1}
@@ -118,80 +115,86 @@ const HowItWorksSection: FC = () => {
 					<p>Дополнительно</p>
 					<p>13</p>
 				</div>
-
 				<div className={styles.rowTable}>
 					<p>Оценка использования типовых клише</p>
 					<p>0</p>
 				</div>
-
 				<div className={styles.textarea}>
 					<p>Комментарий...</p>
 				</div>
-
 				<Image src={A_ImageGraph} alt='График для анализа результатов' draggable={false} />
 			</div>
 		</CardInfo>,
 	]
 
-	// Для ширины экрана до 1023px меняем порядок карточек: 4, 5, 1, 2, 3
-	const mobileOrder = [3, 4, 0, 1, 2] // индексы карточек в нужном порядке
-	const cardsToRender = width <= 1023 ? mobileOrder.map(i => cards[i]) : cards
+	const totalCards = cards.length
+
+	const cardsToRender = cards
+
+	// Размеры карточек соответствуют CSS-брейкпоинтам
+	const cardWidth = width <= 767 ? 83.256 : width <= 1023 ? 52.638 : 22.865
+	const gap = width <= 767 ? 2.791 : width <= 1023 ? 2.398 : 1.042
+	// На мобилке/планшете cardsProcess начинается от левого края (align-self: flex-start),
+	// поэтому центрируем первую карточку через отступ
+	const centeredOffset = isMobile ? (100 - cardWidth) / 2 : 0
+	const translateX = centeredOffset - currentCard * (cardWidth + gap)
+
+	// Мгновенный прыжок без анимации (для бесконечной ленты на мобилке)
+	const jumpTo = (index: number) => {
+		const el = sliderRef.current
+		if (!el) return
+		el.style.transition = 'none'
+		setCurrentCard(index)
+		requestAnimationFrame(() =>
+			requestAnimationFrame(() => {
+				if (sliderRef.current) sliderRef.current.style.transition = ''
+			})
+		)
+	}
+
+	const handlePrev = () => {
+		if (isMobile) {
+			// Мобилка: бесконечная лента, один шаг назад
+			if (currentCard === 0) jumpTo(totalCards - 1)
+			else setCurrentCard(c => c - 1)
+		} else {
+			// Десктоп: назад к первой позиции (4 карточки слева)
+			setCurrentCard(0)
+		}
+	}
+
+	const handleNext = () => {
+		if (isMobile) {
+			// Мобилка: бесконечная лента, один шаг вперёд
+			if (currentCard === totalCards - 1) jumpTo(0)
+			else setCurrentCard(c => c + 1)
+		} else {
+			// Десктоп: вперёд к второй позиции (4 карточки сдвинуты на 1)
+			setCurrentCard(c => (c < 1 ? 1 : 1))
+		}
+	}
+
+	const ArrowLeft = () => (
+		<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'>
+			<path d='M10.0596 2.71979L5.7129 7.06645C5.19957 7.57979 5.19957 8.41978 5.7129 8.93312L10.0596 13.2798'
+				stroke='#757575' strokeWidth='1.5' strokeMiterlimit='10' strokeLinecap='round' strokeLinejoin='round' />
+		</svg>
+	)
+
+	const ArrowRight = () => (
+		<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'>
+			<path d='M5.94043 13.2802L10.2871 8.93355C10.8004 8.42021 10.8004 7.58021 10.2871 7.06688L5.94043 2.72021'
+				stroke='#757575' strokeWidth='1.5' strokeMiterlimit='10' strokeLinecap='round' strokeLinejoin='round' />
+		</svg>
+	)
 
 	return (
-		<section className={styles.howItWorksSection} aria-label="Как это работает">
-			<h2 id="how-it-works-heading">Как это работает</h2>
+		<section className={styles.howItWorksSection} aria-label='Как это работает'>
+			<h2 id='how-it-works-heading'>Как это работает</h2>
 
-			{width <= 767 && (
-				<div className={styles.buttonsArrows}>
-					<button
-						className={styles.buttonNext}
-						onClick={handlePrevClick}
-						aria-label='Предыдущая карточка'
-					>
-						<svg
-							xmlns='http://www.w3.org/2000/svg'
-							width='16'
-							height='16'
-							viewBox='0 0 16 16'
-							fill='none'
-						>
-							<path
-								d='M10.0596 2.71979L5.7129 7.06645C5.19957 7.57979 5.19957 8.41978 5.7129 8.93312L10.0596 13.2798'
-								stroke='#757575'
-								strokeWidth='1.5'
-								strokeMiterlimit='10'
-								strokeLinecap='round'
-								strokeLinejoin='round'
-							/>
-						</svg>
-					</button>
-					<button
-						className={styles.buttonNext}
-						onClick={handleNextClick}
-						aria-label='Следующая карточка'
-					>
-						<svg
-							xmlns='http://www.w3.org/2000/svg'
-							width='16'
-							height='16'
-							viewBox='0 0 16 16'
-							fill='none'
-						>
-							<path
-								d='M5.94043 13.2802L10.2871 8.93355C10.8004 8.42021 10.8004 7.58021 10.2871 7.06688L5.94043 2.72021'
-								stroke='#757575'
-								strokeWidth='1.5'
-								strokeMiterlimit='10'
-								strokeLinecap='round'
-								strokeLinejoin='round'
-							/>
-						</svg>
-					</button>
-				</div>
-			)}
-
-			<div className={styles.cardsWrapper} role="region" aria-label="Шаги работы с CheckMate" aria-live="polite">
+			<div className={styles.cardsWrapper} role='region' aria-label='Шаги работы с CheckMate'>
 				<div
+					ref={sliderRef}
 					className={styles.cardsProcess}
 					style={{
 						transform: `translateX(${translateX}vw)`,
@@ -201,54 +204,14 @@ const HowItWorksSection: FC = () => {
 					{cardsToRender}
 				</div>
 
-				{width > 767 && (
-					<div className={styles.buttonsArrows}>
-						<button
-							className={styles.buttonNext}
-							onClick={handlePrevClick}
-							aria-label='Предыдущая карточка'
-						>
-							<svg
-								xmlns='http://www.w3.org/2000/svg'
-								width='16'
-								height='16'
-								viewBox='0 0 16 16'
-								fill='none'
-							>
-								<path
-									d='M10.0596 2.71979L5.7129 7.06645C5.19957 7.57979 5.19957 8.41978 5.7129 8.93312L10.0596 13.2798'
-									stroke='#757575'
-									strokeWidth='1.5'
-									strokeMiterlimit='10'
-									strokeLinecap='round'
-									strokeLinejoin='round'
-								/>
-							</svg>
-						</button>
-						<button
-							className={styles.buttonNext}
-							onClick={handleNextClick}
-							aria-label='Следующая карточка'
-						>
-							<svg
-								xmlns='http://www.w3.org/2000/svg'
-								width='16'
-								height='16'
-								viewBox='0 0 16 16'
-								fill='none'
-							>
-								<path
-									d='M5.94043 13.2802L10.2871 8.93355C10.8004 8.42021 10.8004 7.58021 10.2871 7.06688L5.94043 2.72021'
-									stroke='#757575'
-									strokeWidth='1.5'
-									strokeMiterlimit='10'
-									strokeLinecap='round'
-									strokeLinejoin='round'
-								/>
-							</svg>
-						</button>
-					</div>
-				)}
+				<div className={styles.buttonsArrows}>
+					<button className={styles.buttonNext} onClick={handlePrev} aria-label='Предыдущая карточка'>
+						<ArrowLeft />
+					</button>
+					<button className={styles.buttonNext} onClick={handleNext} aria-label='Следующая карточка'>
+						<ArrowRight />
+					</button>
+				</div>
 			</div>
 		</section>
 	)

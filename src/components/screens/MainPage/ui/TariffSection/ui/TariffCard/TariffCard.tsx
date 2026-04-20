@@ -10,6 +10,7 @@ const TariffCard: FC<ITariffCard> = ({
   imageSrc,
   subscriptionName,
   count,
+  days,
   price,
 }) => {
   const handleTryButtonClick = () => {
@@ -56,6 +57,7 @@ const TariffCard: FC<ITariffCard> = ({
         </div>
 
         <p itemProp="description">{count} проверок</p>
+        <p>{days} дней</p>
       </div>
 
       <Button

@@ -5,5 +5,6 @@ export interface ITariffCard
   imageSrc: string;
   subscriptionName: string;
   count: number;
+  days: number;
   price: number;
 }

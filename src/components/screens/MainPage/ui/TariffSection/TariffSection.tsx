@@ -7,11 +7,11 @@ import styles from "./TariffSection.module.css";
 import TariffCard from "./ui/TariffCard/TariffCard";
 
 const PLANS = [
-  { name: "Lite",  price: 149,   checks: 10,   image: Q_ImageTariff1 },
-  { name: "Plus",  price: 549,   checks: 50,   image: Q_ImageTariff1 },
-  { name: "Pro",   price: 1449,  checks: 200,  image: Q_ImageTariff2 },
-  { name: "Ultra", price: 3990,  checks: 600,  image: Q_ImageTariff1 },
-  { name: "Mega",  price: 14490, checks: 2400, image: Q_ImageTariff1 },
+  { name: "Lite",  price: 149,   checks: 10,   days: 14,  image: Q_ImageTariff1 },
+  { name: "Plus",  price: 549,   checks: 50,   days: 30,  image: Q_ImageTariff1 },
+  { name: "Pro",   price: 1449,  checks: 200,  days: 60,  image: Q_ImageTariff2 },
+  { name: "Ultra", price: 3990,  checks: 600,  days: 90,  image: Q_ImageTariff1 },
+  { name: "Mega",  price: 14490, checks: 2400, days: 365, image: Q_ImageTariff1 },
 ];
 
 const TariffSection: FC = () => {
@@ -26,6 +26,7 @@ const TariffSection: FC = () => {
           <TariffCard
             key={plan.name}
             count={plan.checks}
+            days={plan.days}
             imageSrc={plan.image}
             price={plan.price}
             subscriptionName={plan.name}

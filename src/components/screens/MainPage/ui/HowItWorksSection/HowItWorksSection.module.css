@@ -261,6 +261,7 @@
 		height: 69.664vw;
 		gap: 2.398vw;
 		padding-left: 0;
+		align-self: flex-start;
 	}
 
 	.task {
@@ -392,6 +393,7 @@
 		height: 135.116vw;
 		gap: 2.791vw;
 		padding-left: 0;
+		align-self: flex-start;
 	}
 
 	.task {
